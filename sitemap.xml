@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2019-05-11T13:32:31.247Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2019-05-11T13:32:31.247Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2019-05-11T13:32:31.246Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/05/11/yuque/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E5%9C%B0%E5%9B%BE/</loc>
+    
+    <lastmod>2019-05-11T13:26:27.371Z</lastmod>
+    
+  </url>
+  
+</urlset>
