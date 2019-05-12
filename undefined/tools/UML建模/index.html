@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>UML建模 | Pmlibrary</title>
+    
+    
+        <meta name="keywords" content="UML建模">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="文章内容来自CSDN的 学无止境–有分享有梦想 、http://developer.51cto.com/art/201006/207993.htm、https://mp.weixin.qq.com/s/mqUlXJ3lHVbK_r7z1vlJug等网站内容后续加以整理，如有侵犯版权请联系xiong_cx@outlook.com删除，谢谢。 简介 什么是UML UML这三个字母的全称是Unified">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UML建模">
+<meta property="og:url" content="http://yoursite.com/undefined/tools/UML建模/index.html">
+<meta property="og:site_name" content="Pmlibrary">
+<meta property="og:description" content="文章内容来自CSDN的 学无止境–有分享有梦想 、http://developer.51cto.com/art/201006/207993.htm、https://mp.weixin.qq.com/s/mqUlXJ3lHVbK_r7z1vlJug等网站内容后续加以整理，如有侵犯版权请联系xiong_cx@outlook.com删除，谢谢。 简介 什么是UML UML这三个字母的全称是Unified">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215469-47c321e3-44b8-4095-90b3-3dd6b1b55513.jpeg#align=left&display=inline&height=340&originHeight=340&originWidth=454&size=0&status=done&width=454">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215721-820824ab-329d-4027-9625-26a985823d7a.jpeg#align=left&display=inline&height=175&originHeight=175&originWidth=150&size=0&status=done&width=150">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215347-28a53856-e9e0-4993-acc7-c28f3251610e.jpeg#align=left&display=inline&height=165&originHeight=165&originWidth=150&size=0&status=done&width=150">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215374-4de8e4b5-6016-4897-961d-d85c4158254a.jpeg#align=left&display=inline&height=250&originHeight=250&originWidth=450&size=0&status=done&width=450">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215281-2ae3a6df-0384-4283-99b9-a4e5ce42618d.jpeg#align=left&display=inline&height=360&originHeight=360&originWidth=550&size=0&status=done&width=550">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215615-51d7b981-6387-4d17-9916-b36954e9ca79.jpeg#align=left&display=inline&height=90&originHeight=90&originWidth=500&size=0&status=done&width=500">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215414-df5ffc92-f98b-4f6e-a53c-ba57d1598d76.jpeg#align=left&display=inline&height=120&originHeight=120&originWidth=410&size=0&status=done&width=410">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215338-26b858e6-3921-457f-88f9-b90420e615bc.jpeg#align=left&display=inline&height=150&originHeight=150&originWidth=601&size=0&status=done&width=601">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215672-7bc9c71d-7181-4b80-9d1a-c878cab3a879.jpeg#align=left&display=inline&height=205&originHeight=205&originWidth=463&size=0&status=done&width=463">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215568-e491a2d2-7fe2-444c-b422-c84f48d52ece.jpeg#align=left&display=inline&height=159&originHeight=159&originWidth=520&size=0&status=done&width=520">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215493-ba53eebe-871a-4c0b-b5f1-b2ffd7ddd42c.jpeg#align=left&display=inline&height=387&originHeight=387&originWidth=468&size=0&status=done&width=468">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215673-a24c3ec8-fb6e-47f3-b470-84178ba4dc1a.jpeg#align=left&display=inline&height=167&originHeight=167&originWidth=527&size=0&status=done&width=527">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215386-1aaf7a48-ab26-4e37-82a7-d6e8663f9711.jpeg#align=left&display=inline&height=339&originHeight=339&originWidth=668&size=0&status=done&width=668">
+<meta property="og:updated_time" content="2019-05-12T13:42:23.062Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UML建模">
+<meta name="twitter:description" content="文章内容来自CSDN的 学无止境–有分享有梦想 、http://developer.51cto.com/art/201006/207993.htm、https://mp.weixin.qq.com/s/mqUlXJ3lHVbK_r7z1vlJug等网站内容后续加以整理，如有侵犯版权请联系xiong_cx@outlook.com删除，谢谢。 简介 什么是UML UML这三个字母的全称是Unified">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215469-47c321e3-44b8-4095-90b3-3dd6b1b55513.jpeg#align=left&display=inline&height=340&originHeight=340&originWidth=454&size=0&status=done&width=454">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Pmlibrary" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Pmlibrary</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            tools
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/undefined/tools/用户体验地图/">用户体验地图</a></li>  <li class="file active"><a href="/undefined/tools/UML建模/">UML建模</a></li>  <li class="file"><a href="/undefined/tools/KANO 模型/">KANO 模型</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-tools/UML建模" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/tools/">tools</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/undefined/tools/UML建模/">
+            <time datetime="2019-05-12T11:56:24.000Z" itemprop="datePublished">2019-05-12</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/raw/writing/source/_posts/tools/UML建模.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/edit/writing/source/_posts/tools/UML建模.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/commits/writing/source/_posts/tools/UML建模.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            UML建模
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p>文章内容来自CSDN的 <a href="https://me.csdn.net/soft_zzti" target="_blank" rel="noopener">学无止境–有分享有梦想</a> 、<a href="http://developer.51cto.com/art/201006/207993.htm" target="_blank" rel="noopener">http://developer.51cto.com/art/201006/207993.htm</a>、<a href="https://mp.weixin.qq.com/s/mqUlXJ3lHVbK_r7z1vlJug" target="_blank" rel="noopener">https://</a><a href="https://mp.weixin.qq.com/s/mqUlXJ3lHVbK_r7z1vlJug" target="_blank" rel="noopener">mp.</a><a href="https://mp.weixin.qq.com/s/mqUlXJ3lHVbK_r7z1vlJug" target="_blank" rel="noopener">w</a><a href="https://mp.weixin.qq.com/s/mqUlXJ3lHVbK_r7z1vlJug" target="_blank" rel="noopener">eixin.qq.com/s/mqUlXJ3lHVbK_r7z1vlJug</a>等网站内容后续加以整理，如有侵犯版权请联系<a href="mailto:xiong_cx@outlook.com" target="_blank" rel="noopener">xiong_cx@outlook.com</a>删除，谢谢。<br><a name="6xpmT"></a></p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h1><p><a name="9iXaS"></a></p>
+<h3 id="什么是UML"><a href="#什么是UML" class="headerlink" title="什么是UML"></a><strong>什么是UML</strong></h3><p> UML这三个字母的全称是Unified Modeling Language，直接翻译就是统一建模语言，简单地说就是一种有特殊用途的语言。<br> 你可能会问：这明明是一种图形，为什么说是语言呢?伟大的汉字还不是从图形(象形文字)开始的吗?语言是包括文字和图形的!其实有很多内容文字是无法表达的，你见过建筑设计图纸吗?里面还不是很多图形，光用文字能表达清楚建筑设计吗?在建筑界，有一套标准来描述设计，同样道理，在软件开发界，我们也需要一套标准来帮助我们做好软件开发的工作。UML就是其中的一种标准，注意这可不是唯一标准，只是UML是大家比较推崇的一种标准而已，说不定以后有一个更好的标准可能会取代它呢!UML并不是强制性标准，没有法律规定你在软件开发中一定要用UML，不能用其它的，我们的目标是善用包括UML在内的各种标准，来提高我们软件开发的水平。<br><a name="1b9kI"></a></p>
+<h3 id="UML有什么用"><a href="#UML有什么用" class="headerlink" title="UML有什么用?"></a><strong>UML有什么用?</strong></h3><p> 有很多人认为，UML的主要用途就是软件设计!也有人认为，如果你不是开发人员，是难以理解UML的。<br> 然而我第一次在实际工作中应用UML的却不是软件设计，而是软件需求分析!当时我们和客户面对面沟通调研需求的时候，直接用类图、顺序图、活动图、用例图等UML。我们并没有因此和客户无法沟通，反而是沟通得更加顺畅。客户在我们的引导下，很快就会读懂这些UML图，因为UML图，让我们和客户的沟通效率和效果更好!你可能觉得很神奇，在后续章节中，我将会为你逐一揭开神奇背后的“秘密”。<br> UML可帮助我们做软件需求分析和软件设计的工作，在我工作中大概各占了50%的比例，当然在你的实际工作中不一定是这样的比例。UML会让你的需求分析或者软件设计工作更上一层楼，本书将会介绍UML在需求分析方面的最佳实践。<br> 告诉你一个秘密，UML应用于软件需求分析时，其学习门槛将会大大降低!语法复杂度会降低，而且你基本不需要掌握软件开发的知识。只要你对软件需求分析感兴趣，认真学习和应用UML，就很有机会成为软件需求分析高手。<br><a name="NmFOK"></a></p>
+<h1 id="UML的分类"><a href="#UML的分类" class="headerlink" title="UML的分类"></a><strong>UML的分类</strong></h1><p> UML分结构图和行为图。</p>
+<ul>
+<li><strong>结构型的图(Structure Diagram)</strong></li>
+<li>类图(Class Diagram)</li>
+<li>对象图(Object Diagram)</li>
+<li>构件图(Component Diagram)</li>
+<li>部署图(Deployment Diagram)</li>
+<li>包图(Package Diagram)</li>
+<li><strong>行为型的图(Behavior Diagram)</strong></li>
+<li>活动图(Activity Diagram)</li>
+<li>状态机图(State Machine Diagram)</li>
+<li>顺序图(Sequence Diagram)</li>
+<li>通信图(Communication Diagram)</li>
+<li>用例图(Use Case Diagram)  </li>
+<li>时序图(Timing Diagram)</li>
+</ul>
+<p>结构是静态的，它描绘结构元素构成的系统或函数，显示结构或运行时体系结构的静态关系，比如类图、对象图、构件图、部署图、包图。<br>行为是动态的，它描绘一个系统或业务过程的行为特征，显示动态模型的视图，比如活动图、状态图、顺序图、通信图、用例图、时序图。<br>每种图形都是从需求或设计的不同层面来描述模型，通过各种模型描述系统的类、对象、关联、职责、行为、接口、用例、包、顺序、协作，以及状态，以便产品经理通过图形化的方式从各个角度了解产品，更好的表达思想，便于交流。<br>常用的UML建模工具，后面章节会详细介绍<br>ProcessOn、Enterprise Architect 、Visio、StarUML、OmniGraffle、ArgoUML。<br>常见的UML建模场景，后面章节会详细介绍<br>业务建模、需求模型、设计模型、实现模型、数据库模型。<br>UML建模重点不在于如何画UML，而是如何运用UML思考方式去管理好一个产品。<br>UML各种图都适用于不同的场景，可从不同角度诠释产品。<br><a name="5XqS7"></a></p>
+<h1 id="结构型的UML介绍及用法"><a href="#结构型的UML介绍及用法" class="headerlink" title="结构型的UML介绍及用法"></a><strong>结构型的UML介绍及用法</strong></h1><p><strong> 1.类图(Class Diagram)</strong><br>请看下面这个类图：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215469-47c321e3-44b8-4095-90b3-3dd6b1b55513.jpeg#align=left&amp;display=inline&amp;height=340&amp;originHeight=340&amp;originWidth=454&amp;size=0&amp;status=done&amp;width=454" alt></a><br>图 1.1 某模具系统类图<br>此图截取自某模具管理系统的业务概念分析图，图中一个一个的矩形就是类，这些类之间有各种线条连接，这些线条表示类之间的关系。类图是分析业务概念的首选，类图可能是使用率最高的UML图。<br>再看下面这个Person类图，这时软件设计时用到的一个图：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215721-820824ab-329d-4027-9625-26a985823d7a.jpeg#align=left&amp;display=inline&amp;height=175&amp;originHeight=175&amp;originWidth=150&amp;size=0&amp;status=done&amp;width=150" alt></a><br>图 1.2 Person类图<br>该Person类有以下属性(Attribute)：Name(姓名),Sex(性别),Department(部门)等，有以下操作(Operation)：Work(工作)等。类有属性和操作，但用类图分析业务模型时，往往不需要使用操作，如图1.1中的类就只有属性。<br>Attribute有特性、特征等译法，Operation也称作方法，但本书遵循UML中文术语标准，即Attribute为属性，Operation为操作。<br><strong> 2.对象图(Object Diagram)</strong><br>一般情况下只有在软件开发中才会使用到对象图，下面的内容以开发的角度来说明对象图，如果你没有开发经验，阅读起来可能有一点难度。<br>图1.2中的Person类，用代码实例化如下：<br>Person person = new Person();<br>……<br>类(Class)实例化后就是对象(Object)，对象person是类Person的实例，上述代码可以用对象图表示如下：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215347-28a53856-e9e0-4993-acc7-c28f3251610e.jpeg#align=left&amp;display=inline&amp;height=165&amp;originHeight=165&amp;originWidth=150&amp;size=0&amp;status=done&amp;width=150" alt></a><br>图 1.3 Person类的对象图<br>对象图和类图的样子很相似，对象是类的实例化，“person : Person”表示对象person是类Person的实例。对象图往往只在需要描述复杂算法时才会使用，画出来的对象图往往不会只有一个对象，该图只画了一个对象，其目的是尽量简化以便读者的理解什么是对象图。<br>在需求分析工作中基本上不需要使用对象图，从严谨的角度来看某些情况下应该使用对象图，但我往往还是会用类图来处理，这样更加简便而且容易理解。我们将在类图一章再次讲解对象图。<br><strong>3.构件图(Component Diagram)</strong><br>构件图也叫组件图，两个名字均符合UML中文术语标准。<br>一辆汽车由轮子、发动机等物理部件组成，一个软件往往也是由很多“物理部件”(如：控件、重用构件等)组成的，构件图就是用来描述软件内部物理组成的一种图。下图是某权限构件设计图：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215374-4de8e4b5-6016-4897-961d-d85c4158254a.jpeg#align=left&amp;display=inline&amp;height=250&amp;originHeight=250&amp;originWidth=450&amp;size=0&amp;status=done&amp;width=450" alt></a><br>图 1.4 某权限构件设计图<br>图1.4右上方有这样标志 的矩形表示一个构件，构件可以再包含构件。<br>软件需求分析工作中，需要用到构件图的情况不是很多，以下情况除外：<br>1. 待开发的系统需要与第三方的系统、原有系统、某些老系统等交互，这时可用构件图描述交互要求。<br>2. 客户对软件设计有某些特殊要求，这时可用构件图来描述要求。<br>构件图有时不会单独使用，还会和部署图一起结合使用。<br><strong> 4.部署图(Deployment Diagram)</strong><br>部署图是用来描述系统如何部署、本系统与其他系统是怎样的关系的一种图，如下图：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215281-2ae3a6df-0384-4283-99b9-a4e5ce42618d.jpeg#align=left&amp;display=inline&amp;height=360&amp;originHeight=360&amp;originWidth=550&amp;size=0&amp;status=done&amp;width=550" alt></a><br>图 1.5 某24小时便利店的管理系统部署图<br>图中一个个立体的矩形是部署图的“节点”，一个节点表示一个物理的设备，节点之间的线条表示节点间的物理连接关系。<br>大部分客户都会具备一定的IT基础环境(如具备局域网、一些服务器、某些软件平台等)，软件系统需要基于当前的IT基础环境来规划，这时我们可以使用部署图来做这个规划。<br>分析系统的需求，不能忽略系统架构、部署、IT架构等方面的要求，我们要基于客户当前的IT基础环境，做一个最符合客户利益的规划。<br>要活用构件图、部署图来分析需求，需要具备一定的IT基础架构知识和软件设计知识，如果你还不具备相关知识，那么可以考虑抓紧补充相关知识。不过需求分析工作更多的还是分析业务，提炼功能性需求，这部分工作能做好是相当不容易的事情。对于技术方面的非功能性需求分析，可交由有技术背景的专业人士负责。<br><strong>5.包图(Package Diagram)</strong><br>Package有“打包”的意思，包图的主要用途是“打包”类图。用类图描述业务概念时，很多时候会因为业务类太多，而导致类图非常庞大，不利于阅读，这时可以将某些类放入“包”中，通过包图来组织业务概念图。<br>下图是包图的一个示例：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215615-51d7b981-6387-4d17-9916-b36954e9ca79.jpeg#align=left&amp;display=inline&amp;height=90&amp;originHeight=90&amp;originWidth=500&amp;size=0&amp;status=done&amp;width=500" alt></a><br>图 1.6 包图<br>图中好像文件夹样子的就是一个“包”，包之间的线条表示包之间的关系。<br><a name="E9wUS"></a></p>
+<h1 id="行为型的UML介绍及用法"><a href="#行为型的UML介绍及用法" class="headerlink" title="行为型的UML介绍及用法"></a><strong>行为型的UML介绍及用法</strong></h1><p><strong> 1.活动图(Activity Diagram)</strong><br>我们将起床到出门上班这个过程画成活动图，可能是这样的：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215414-df5ffc92-f98b-4f6e-a53c-ba57d1598d76.jpeg#align=left&amp;display=inline&amp;height=120&amp;originHeight=120&amp;originWidth=410&amp;size=0&amp;status=done&amp;width=410" alt></a><br>图 1.7 起床到出门上班的活动图<br>   活动图中的一个圆边框框表示一个“活动”，多个活动之间的带箭头线条表示活动的先后顺序，该图只是表达了一个顺序流程，活动图还可以表达分支结构。如果你以前曾学过流程图的话，你会发现活动图和流程图很相似。活动图可能是三种能表示流程的UML图中最接近我们思维习惯的一种，下面来学习另外两种能表达流程的图。 <br><strong> 2.状态机图(State Machine Diagram)</strong><br>状态机图又叫状态图，但状态图这个译名并没有译出Machine的意思。<br>状态机图从某个物品的状态是如何变化的角度来展示流程，下图某请假条审批流程：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215338-26b858e6-3921-457f-88f9-b90420e615bc.jpeg#align=left&amp;display=inline&amp;height=150&amp;originHeight=150&amp;originWidth=601&amp;size=0&amp;status=done&amp;width=601" alt></a><br>图 1.8 请假处理流程<br>整个请假审批流程是围绕“请假条”这个物体进行的，随着不同的审批阶段，请假条具备不同的状态。我们分析业务流程时会发现很多流程其实是围绕某个物品进行的，这时可考虑使用状态机图。<br><strong>3.顺序图(Sequence Diagram)</strong><br>你去餐厅吃饭，向服务员点餐到服务员送菜上来，这个过程用顺序图可表示如下：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215672-7bc9c71d-7181-4b80-9d1a-c878cab3a879.jpeg#align=left&amp;display=inline&amp;height=205&amp;originHeight=205&amp;originWidth=463&amp;size=0&amp;status=done&amp;width=463" alt></a><br>图 1.9 点菜的顺序图<br>该图有三个“小人”，每个“小人”下面的文字说明(如：顾客)表示其代表的角色。角色与角色之间有一些线条链接，表示角色之间是如何交互的。该图表示的意思是：顾客向服务员点菜后，服务员将点菜信息传递给厨师，然后厨师做菜，最后再由服务员送菜给你。<br>点菜过程涉及几个环节，每个环节均由不同的角色来负责，如果遇到类似的情况，你可以考虑使用顺序图来分析。用顺序图来分析的好处是能清晰表达整个过程所参与的角色，角色与角色之间的关系，各角色是如何被卷入这个过程当中的。<br><strong> 4.通信图(Communication Diagram)</strong><br>UML1.1时，该图英文名为Collaboration Diagram;UML2.x时，英文名为Communication Diagram。将英文名字直接翻译，原来的英文名字可译为协作图，而新的英文名字译为通信图。<br>通信图是顺序图的另外一种画法，点菜的顺序图，如果用通信图来画可表示如下：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215568-e491a2d2-7fe2-444c-b422-c84f48d52ece.jpeg#align=left&amp;display=inline&amp;height=159&amp;originHeight=159&amp;originWidth=520&amp;size=0&amp;status=done&amp;width=520" alt></a><br>图 1.10 点菜的通信图<br>三个“小人”分表表示三种角色：顾客、服务员、厨师;角色之间有直线联系表示他们之间有关系;带序号的文字和箭头，表示角色之间传递的信息。<br>顺序图更强调先后顺序，通信图更强调相互之间的关系。我觉得顺序图实用性更好一点，比通信图能表达更多的信息，更容易读懂，在需求分析工作中我基本不会使用通信图。<br><strong> 5.用例图(Use Case Diagram)</strong><br>下图是用例图的示意图：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215493-ba53eebe-871a-4c0b-b5f1-b2ffd7ddd42c.jpeg#align=left&amp;display=inline&amp;height=387&amp;originHeight=387&amp;originWidth=468&amp;size=0&amp;status=done&amp;width=468" alt></a><br>图 1.11 用例图<br>用例图表达的是什么角色通过软件系统能做什么事情，我们可以使用用例图系统地表达软件系统的绝大部分需求。<br><strong> 6.时序图(Timing Diagram)</strong><br>时序图也叫时间图，时序图是UML中文术语标准的说法，而时间图不是标准的说法。<br>时序图是表示某东西的状态随时间变化而变化的一种图，参见下图：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215673-a24c3ec8-fb6e-47f3-b470-84178ba4dc1a.jpeg#align=left&amp;display=inline&amp;height=167&amp;originHeight=167&amp;originWidth=527&amp;size=0&amp;status=done&amp;width=527" alt></a><br>图 1.12 灯的开关状态随时间变化图<br>此图表示在0秒到30秒，灯的状态是关的，30-60秒灯的状态为开，60秒后状态为关。<br>在实际工作中我基本上没有试用过时间图。<br>下面通过这个表格来总结一下我在需求分析工作中应用各种UML图的情况：<br><a href="https://www.yuque.com/pmlibrary/tools" target="_blank" rel="noopener"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/282324/1557662215386-1aaf7a48-ab26-4e37-82a7-d6e8663f9711.jpeg#align=left&amp;display=inline&amp;height=339&amp;originHeight=339&amp;originWidth=668&amp;size=0&amp;status=done&amp;width=668" alt></a><br>表 1.13 各种UML图实际应用情况<br><a name="bqkFe"></a></p>
+<h1 id="建模工具"><a href="#建模工具" class="headerlink" title="建模工具 "></a><strong>建模工具 </strong></h1><p>UML建模工具Visio 、Rational Rose、PowerDesign的比较，Visio用得相对较多。<br>  <br> ROSE是直接从UML发展而诞生的设计工具，它的出现就是为了对UML建模的支持，ROSE一开始没有对数据库端建模的支持，但是在现在的版本中已经加入数据库建模的功能。ROSE主要是在开发过程中的各种语义、模块、对象以及流程，状态等描述比较好，主要体现在能够从各个方面和角度来分析和设计，使软件的开发蓝图更清晰，内部结构更加明朗（但是它的结构仅仅对那些对掌握UML的开发人员，也就是说对客户了解系统的功能和流程等并不一定很有效），对系统的代码框架生成有很好的支持。但对数据库的开发管理和数据库端的迭代不是很好。<br>     <br>PowerDesigner原来是对数据库建模而发展起来的一种数据库建模工具。直到7.0版才开始对面向对象的开发的支持，后来又引入了对UML的支持。但是由于PowerDesigner侧重不一样，所以它对数据库建模的支持很好，支持了能够看到的90%左右的数据库，对UML的建模使用到的各种图的支持比较滞后。但是在最近得到加强。所以使用它来进行UML开发的并不多，很多人都是用它来作为数据库的建模。如果使用UML分析，它的优点是生成代码时对Sybase的产品PowerBuilder的支持很好（其它UML建模工具则没有或者需要一定的插件），其他面向对象语言如 C++，Java，VB,C#等支持也不错。但是它好像继承了Sybase公司的一贯传统，对中国的市场不是很看看好，所以对中文的支持总是有这样或那样的问题。<br>    <br>UML建模工具Visio 原来仅仅是一种画图工具，能够用来描述各种图形（从电路图到房屋结构图），也是到VISIO2000才开始引进软件分析设计功能到代码生成的全部功能，它可以说是目前最能够用图形方式来表达各种商业图形用途的工具（对软<br>件开发中的UML支持仅仅是其中很少的一部分）。它跟微软的office产品的能够很好兼容。能够把图形直接复制或者内嵌到WORD的文档中。但是对于代码的生成更多是支持微软的产品如VB,VC++,MS SQL Server 等（这也是微软的传统），所以它可以说用于图形语义的描述比较方便，但是用于软件开发过程的迭代开发则有点牵强。<br> <br> UML建模工具Visio 、Rational Rose、PowerDesign三种建模工具应用最广：<br>1. Rational Rose，它是ibm的 。<br>2.Microsoft的 Microsoft Office Visio® 2003 <br>3.Enterprise Architect。还有其他工具如PowerDesigner等<br>1.Rational Rose是一种基于UML的建模工具。在面向对象应用程序开发领域，Rational Rose是影响其发展的一个重要因素。Rational Rose自推出以来就受到了业界的瞩目，并一直引领着可视化建模工具的发展。越来越多的软件公司和开发团队开始或者已经采用Rational Rose，用于大型项目开发的分析、建模与设计等方面。<br>从使用的角度分析，Rational Rose易于使用，支持使用多种构件和多种语言的复杂系统建模；利用双向工程技术可以实现迭代式开发；团队管理特性支持大型、复杂的项目和大型而且通常队员分散在各个不同地方的开发团队。同时，Rational Rose与微软Visual Studio系列工具中GUI的完美结合所带来的方便性，使得它成为绝大多数开发人员首选建模工具；Rose还是市场上第一个提供对基于UML的数据建模和Web建模支持的工具。此外，Rose还为其他一些领域提供支持，如用户定制和产品性能改进。<br>具体介绍可参看<a href="http://www.uml.org.cn/RequirementProject/200604043.htm" target="_blank" rel="noopener">http://www.uml.org.</a><a href="http://www.uml.org.cn/RequirementProject/200604043.htm" target="_blank" rel="noopener">cn</a><a href="http://www.uml.org.cn/RequirementProject/200604043.htm" target="_blank" rel="noopener">/RequirementPro</a><a href="http://www.uml.org.cn/RequirementProject/200604043.htm" target="_blank" rel="noopener">j</a><a href="http://www.uml.org.cn/RequirementProject/200604043.htm" target="_blank" rel="noopener">ect/200604043.htm</a><br>2.UML建模工具Visio ® 2003的简介请看<br><a href="http://www.uml.org.cn/UMLTools/psf/Guide.doc" target="_blank" rel="noopener">h</a><a href="http://www.uml.org.cn/UMLTools/psf/Guide.doc" target="_blank" rel="noopener">ttp://www.uml.org.cn/UMLTools/</a><a href="http://www.uml.org.cn/UMLTools/psf/Guide.doc" target="_blank" rel="noopener">ps</a><a href="http://www.uml.org.cn/UMLTools/psf/Guide.doc" target="_blank" rel="noopener">f/Guide.doc</a><br><a href="http://www.microsoft.com/china/office/xp/visio/default.asp" target="_blank" rel="noopener">h</a><a href="http://www.microsoft.com/china/office/xp/visio/default.asp" target="_blank" rel="noopener">ttp://www.m</a><a href="http://www.microsoft.com/china/office/xp/visio/default.asp" target="_blank" rel="noopener">i</a><a href="http://www.microsoft.com/china/office/xp/visio/default.asp" target="_blank" rel="noopener">crosoft.com/china/office/xp/visio/defaul</a><a href="http://www.microsoft.com/china/office/xp/visio/default.asp" target="_blank" rel="noopener">t</a><a href="http://www.microsoft.com/china/office/xp/visio/default.asp" target="_blank" rel="noopener">.asp</a><br>3.Enterprise Architect<br>Enterprise Architect是一个全功能的、基于UML的visual CASE工具，主要用于设计、编写、构建并管理以目标为导向的软件系统。它支持用户案例、商务流程模式以及动态的图表、分类、界面、协作、结构以及物理模型。此外，它还支持C++、Java、Visual Basic、Delphi、C#以及VB.Net。具体可看<a href="http://www.softwarechn.com/SparxSystems/sparxsystems_index.htm" target="_blank" rel="noopener">http://www.softwar</a><a href="http://www.softwarechn.com/SparxSystems/sparxsystems_index.htm" target="_blank" rel="noopener">ec</a><a href="http://www.softwarechn.com/SparxSystems/sparxsystems_index.htm" target="_blank" rel="noopener">hn.com/SparxSys</a><a href="http://www.softwarechn.com/SparxSystems/sparxsystems_index.htm" target="_blank" rel="noopener">t</a><a href="http://www.softwarechn.com/SparxSystems/sparxsystems_index.htm" target="_blank" rel="noopener">ems/s</a><a href="http://www.softwarechn.com/SparxSystems/sparxsystems_index.htm" target="_blank" rel="noopener">p</a><a href="http://www.softwarechn.com/SparxSystems/sparxsystems_index.htm" target="_blank" rel="noopener">arxsyste</a><a href="http://www.softwarechn.com/SparxSystems/sparxsystems_index.htm" target="_blank" rel="noopener">m</a><a href="http://www.softwarechn.com/SparxSystems/sparxsystems_index.htm" target="_blank" rel="noopener">s_index.htm</a><br>4.PowerDesigner工具简介请看<br><a href="http://www.uml.org.cn/UMLTools/powerDesigner/powerDesignerToolIntroduction.htm" target="_blank" rel="noopener">h</a><a href="http://www.uml.org.cn/UMLTools/powerDesigner/powerDesignerToolIntroduction.htm" target="_blank" rel="noopener">t</a><a href="http://www.uml.org.cn/UMLTools/powerDesigner/powerDesignerToolIntroduction.htm" target="_blank" rel="noopener">tp://www.uml.org.cn/UMLToo</a><a href="http://www.uml.org.cn/UMLTools/powerDesigner/powerDesignerToolIntroduction.htm" target="_blank" rel="noopener">ls/p</a><a href="http://www.uml.org.cn/UMLTools/powerDesigner/powerDesignerToolIntroduction.htm" target="_blank" rel="noopener">owerDesigner/powerDesignerToolIntroduction.htm</a><br>5.EA与Rose UML建模工具比较<br><a href="http://51cmm.csai.cn/casepanel/ST/No061.htm" target="_blank" rel="noopener">h</a><a href="http://51cmm.csai.cn/casepanel/ST/No061.htm" target="_blank" rel="noopener">t</a><a href="http://51cmm.csai.cn/casepanel/ST/No061.htm" target="_blank" rel="noopener">tp://51cmm.csai.cn/casepanel/ST/No061.htm</a><br>6.uml介绍请看uml中国官方网站，这里有很多关于uml建模和建模工具的介绍<br><a href="http://www.uml.org.cn" target="_blank" rel="noopener">h</a><a href="http://www.uml.org.cn" target="_blank" rel="noopener">t</a><a href="http://www.uml.org.cn" target="_blank" rel="noopener">tp://www.uml.org.cn</a><br><a name="7NJ7i"></a></p>
+<h1 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a><strong>使用场景</strong></h1><ul>
+<li>UML除了用于软件设计，还能用于需求分析；</li>
+<li>实际工作中UML是与客户沟通的良好桥梁，在项目需求分析工作中，可直接使用     UML图与客户沟通，并且给客户签署的需求规格说明书中含有大量的UML图；</li>
+<li>产品经理角度用UML建模，用例图、状态图、活动图、时序图与类图相对较多。<br><a name="oxtF1"></a><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h1>UML是Unified Modeling Language的简称，是软件开发界的一套标准，UML不仅可用于软件设计，也可以用于软件需求分析。但UML并不是强制标准，我们应该善用包括UML在内的各种标准来提高我们的水平。<br>UML可分为两类：结构型、行为型，结构性的UML有：类图、对象图、构件图、部署图、包图，行为型的图有活动图、状态机图、顺序图、通信图、用例图、时间图。<br>类图是业务概念模型分析的有利武器，也是面向对象分析能力的强有力训练工具。<br>对象图在需求分析工作中并不常用。<br>构件图、部署图是分析IT基础架构、软件架构等方面需求的有利分析工具，但需要你具备IT基础架构、软件设计方面的知识和经验。<br>包图可用来组织类图，在需求分析工作中应用的机会不是很大。<br>活动图、状态机图、顺序图是分析业务流程的强力武器。活动图的表达思路与流程图很类似，很容易掌握，而且大部分情况下都可以使用活动图来分析业务流程;某流程如果是围绕某个物品进行，该物品在流程中转换多种状态，那么使用状态机图来分析是首选;用顺序图来分析的好处是能清晰表达整个过程所参与的角色，角色与角色之间的关系，各角色是如何被卷入这个过程当中的。<br>通信图可以看作是顺序图的另外一种表达形式，顺序图更强调先后顺序，通信图更强调相互之间的关系。而从我的工作经验看，顺序图更加实用一点。<br>有人会将用例图称作“公仔图”，用例图表达的是什么角色通过软件系统能做什么事情，我们可以使用用例图系统地表达软件系统的绝大部分需求。<br>时间图是表示某东西的状态随时间变化而变化的一种图，我在实际工作中很少有机会能用到这种图<br><a name="mfEUL"></a><h1 id="实践案例"><a href="#实践案例" class="headerlink" title="实践案例"></a><strong>实践案例</strong></h1>此推文很好的介绍了产品经理用的UML工具并结合具体实践案例进行分析<br><a href="https://mp.weixin.qq.com/s/mqUlXJ3lHVbK_r7z1vlJug" target="_blank" rel="noopener">h</a><a href="https://mp.weixin.qq.com/s/mqUlXJ3lHVbK_r7z1vlJug" target="_blank" rel="noopener">t</a><a href="https://mp.weixin.qq.com/s/mqUlXJ3lHVbK_r7z1vlJug" target="_blank" rel="noopener">tps://mp.weixin.qq.com/s/mqUlXJ3lHVbK_r7z1vlJug</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/undefined/tools/KANO 模型/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    KANO 模型
+                
+            </div>
+        </a>
+    
+    
+        <a href="/undefined/tools/用户体验地图/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">用户体验地图</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            John Doe &copy; 2019 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
