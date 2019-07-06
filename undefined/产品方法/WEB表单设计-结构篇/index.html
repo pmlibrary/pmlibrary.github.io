@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>WEB表单设计-结构篇 | Pmlibrary</title>
+    
+    
+        <meta name="keywords" content="WEB表单设计-结构篇">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="下文《WEB表单设计》的学习总结，会分成结构、元素、交互三部分说明。—————————————————————————————–本文内容很棒，我提了部分建议希望能帮助学姐把文章优化得更好~ 文章编写内容结构可参考   表单很重要表单是人们上网完成务的重要方式，不管是网上购物、社交删除、还是各种生产力网站都必须填写各种各校的表单才能完成用户的目标。但是现在的很多表单并非“由外而内”设计，而是以“由内">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WEB表单设计-结构篇">
+<meta property="og:url" content="http://yoursite.com/undefined/产品方法/WEB表单设计-结构篇/index.html">
+<meta property="og:site_name" content="Pmlibrary">
+<meta property="og:description" content="下文《WEB表单设计》的学习总结，会分成结构、元素、交互三部分说明。—————————————————————————————–本文内容很棒，我提了部分建议希望能帮助学姐把文章优化得更好~ 文章编写内容结构可参考   表单很重要表单是人们上网完成务的重要方式，不管是网上购物、社交删除、还是各种生产力网站都必须填写各种各校的表单才能完成用户的目标。但是现在的很多表单并非“由外而内”设计，而是以“由内">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-06T12:03:15.529Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="WEB表单设计-结构篇">
+<meta name="twitter:description" content="下文《WEB表单设计》的学习总结，会分成结构、元素、交互三部分说明。—————————————————————————————–本文内容很棒，我提了部分建议希望能帮助学姐把文章优化得更好~ 文章编写内容结构可参考   表单很重要表单是人们上网完成务的重要方式，不管是网上购物、社交删除、还是各种生产力网站都必须填写各种各校的表单才能完成用户的目标。但是现在的很多表单并非“由外而内”设计，而是以“由内">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Pmlibrary" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Pmlibrary</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            tools
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/undefined/tools/用户体验地图/">用户体验地图</a></li>  <li class="file"><a href="/undefined/tools/UML建模/">UML建模</a></li>  <li class="file"><a href="/undefined/tools/GAP模型/"></a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            产品方法
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/undefined/产品方法/用户体验地图/">用户体验地图</a></li>  <li class="file"><a href="/undefined/产品方法/UML建模/">UML建模</a></li>  <li class="file"><a href="/undefined/产品方法/KANO 模型/">KANO 模型</a></li>  <li class="file"><a href="/undefined/产品方法/产品说明书/">产品说明书</a></li>  <li class="file"><a href="/undefined/产品方法/ORID读书模型/">ORID读书模型</a></li>  <li class="file"><a href="/undefined/产品方法/用户认知地图/">用户认知地图</a></li>  <li class="file"><a href="/undefined/产品方法/怎样才算写了一份好的产品说明书？/">怎样才算写了一份好的产品说明书？</a></li>  <li class="file"><a href="/undefined/产品方法/实例解析：怎么撰写一份产品数据报告/">实例解析：怎么撰写一份产品数据报告</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理常用工具清单/">产品经理常用工具清单</a></li>  <li class="file"><a href="/undefined/产品方法/移情图/">移情图</a></li>  <li class="file"><a href="/undefined/产品方法/卡牌模板及示例/">卡牌模板及示例</a></li>  <li class="file"><a href="/undefined/产品方法/如何撰写一份接地气的PRD文档/">如何撰写一份接地气的PRD文档</a></li>  <li class="file"><a href="/undefined/产品方法/GAP模型/">GAP模型</a></li>  <li class="file"><a href="/undefined/产品方法/如何准备pecha kucha/">如何准备pecha kucha</a></li>  <li class="file"><a href="/undefined/产品方法/产品分析方法论/">产品分析方法论</a></li>  <li class="file"><a href="/undefined/产品方法/软硬产品如何设计/">软硬产品如何设计</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理三大报告/">产品经理三大报告</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理三大文档/">产品经理三大文档</a></li>  <li class="file"><a href="/undefined/产品方法/半路子出家的产品经理，如何做项目管理/">半路子出家的产品经理，如何做项目管理</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理养成计划/">产品经理养成计划</a></li>  <li class="file"><a href="/undefined/产品方法/教你读懂机器学习/">教你读懂机器学习</a></li>  <li class="file"><a href="/undefined/产品方法/如何分析职场环境并破局——具体案例分析/">如何分析职场环境并破局——具体案例分析</a></li>  <li class="file"><a href="/undefined/产品方法/黑天鹅/">黑天鹅</a></li>  <li class="file"><a href="/undefined/产品方法/从点子到产品/">从点子到产品</a></li>  <li class="file"><a href="/undefined/产品方法/结网/">结网</a></li>  <li class="file"><a href="/undefined/产品方法/引导工具箱/">引导工具箱</a></li>  <li class="file"><a href="/undefined/产品方法/从”在看个人主页“来看社交推荐的发展/">从”在看个人主页“来看社交推荐的发展</a></li>  <li class="file"><a href="/undefined/产品方法/设计搜索界面，你需要考虑这20个细节/">设计搜索界面，你需要考虑这20个细节</a></li>  <li class="file active"><a href="/undefined/产品方法/WEB表单设计-结构篇/">WEB表单设计-结构篇</a></li>  <li class="file"><a href="/undefined/产品方法/关于详情页对齐方式分析/">关于详情页对齐方式分析</a></li>  <li class="file"><a href="/undefined/产品方法/PMP考试专区/">PMP考试专区</a></li>  <li class="file"><a href="/undefined/产品方法/NPDP考证专区/">NPDP考证专区</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-产品方法/WEB表单设计-结构篇" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/产品方法/">产品方法</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/undefined/产品方法/WEB表单设计-结构篇/">
+            <time datetime="2019-07-06T10:48:28.000Z" itemprop="datePublished">2019-07-06</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/raw/writing/source/_posts/产品方法/WEB表单设计-结构篇.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/edit/writing/source/_posts/产品方法/WEB表单设计-结构篇.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/commits/writing/source/_posts/产品方法/WEB表单设计-结构篇.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            WEB表单设计-结构篇
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p>下文《WEB表单设计》的学习总结，会分成结构、元素、交互三部分说明。<br>—————————————————————————————–<br>本文内容很棒，我提了部分建议希望能帮助学姐把文章优化得更好~<br> <br>文章编写内容结构可参考</p>
+<hr>
+<p><a name="G7A1Z"></a></p>
+<h2 id="表单很重要"><a href="#表单很重要" class="headerlink" title="表单很重要"></a><strong>表单很重要</strong></h2><p>表单是人们上网完成务的重要方式，不管是网上购物、社交删除、还是各种生产力网站都必须填写各种各校的表单才能完成用户的目标。但是现在的很多表单并非“由外而内”设计，而是以“由内而外”的方式，通常是只是由系统人员根据计算机系统的需求设计，这就导致了表单可能有一堆的问题是系统需求而非用户需求，比如各种安全提问，用户用的非常痛苦。<br>好的表单设计应该由人一样体贴。我们以购物为例，当我们去超市购物时，把商品从货架放到购物车，到收银员结账时，收银员会面带微笑的询问顾客，顾客也能立马从收银员那得到想要的答案，这一切都有良好的体验。但是这一旦从线下转为线上之后，就只剩下一张张冷冰冰的表单了，用户想完成结账就会遇到各种问题，这时就有用户就会觉得送钱都这么困难就干脆不买。<br><a name="k1koP"></a></p>
+<h2 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a><strong>设计原则</strong></h2><p>那么如何设计优秀的表单?这个问题其实不好回答，正确答案就是视情况而定，这看上去是一句正确的废话，但是确实没有太好的方式。不过下面几条原则还是能有一定的指导作用：</p>
+<ul>
+<li><strong>尽量减少痛苦</strong>：用户只想要完成表单后的结果，而非表单，这一过程应该尽量的简洁、容易；</li>
+<li><strong>说明填写完成路径</strong>：表单应该清晰的告诉用户如何完成表单；</li>
+<li><strong>考虑情境</strong>：表单不会单独存在，必然是在一个场景中，那么设计师就应该分析各种存在的场景而设计；</li>
+<li><p><strong>确保一致沟通</strong>：公司内部有各种不同的部门，虽然每个部门都有不同的需求，但是用户只是和一个网站或应用对话，要确保保持一致的服务。<br><a name="BPnKf"></a></p>
+<h2 id="表单的组织"><a href="#表单的组织" class="headerlink" title="表单的组织"></a><strong>表单的组织</strong></h2><p>设计表单应该最先考虑表单的内容，因为用户最关心的是需要填写什么，然后是内容的组织方式，这就需要选择好的问题和有效组织内容。<br><a name="FTXj4"></a></p>
+<h3 id="选取问题"><a href="#选取问题" class="headerlink" title="选取问题"></a><strong>选取问题</strong></h3><p>最好的表单其实是没有表单，这也就是说需要分析每个问题，这个问题是否真的需要、能否自动获取、什么时候提问才适合。同时要注意纸质表单和电子表单，很多在纸质表单上必需回答的问题在电子表单上是可以不必提问的。<br>用户关心的是问题内容和为何要问这些问题。有些设计师会注意类似要不要有冒号这类问题，但是用户真的不关心，用户只是想快速完成任务而已。先想想是否真的理解用户，是否了解公司业务。如果不了解则需要多调查。在确定了问题后再考虑问题的组织。可以问下面几个问题了解：</p>
+</li>
+<li><p>为什么用户会填写表单？</p>
+</li>
+<li>用户和你的公司有什么关系？</li>
+<li>用户觉得这种关系好还是坏？</li>
+<li>表单能否进一步激发用户对产品、服务或其它一切东西的持续热情？</li>
+</ul>
+<p>表单只是阻碍用户实现目的的可怕障碍？<br>在问了上述问题后，可以使用“保留、删减、延迟、解释”这几个策略对问题整理：</p>
+<ul>
+<li><strong>保留</strong>：你问的问题与用户渴望给出的答案一致，则保留，然后设计细节；</li>
+<li><strong>删减</strong>：你问的问题不需要真的马上得到答案，拿掉这个问题；</li>
+<li><strong>延迟</strong>：有些问题也可能不需要马上就问，延迟发问，起到问题不会让人感觉多余或者有侵略性；</li>
+<li><strong>解释</strong>：有些问题用户不想回答，但是对公司真的有价值，而且必须提前问，解释其理由并且简短说明。</li>
+</ul>
+<p>最后，平衡用户需求与商业需求。<br><a name="SajJj"></a></p>
+<h3 id="构建对话"><a href="#构建对话" class="headerlink" title="构建对话"></a><strong>构建对话</strong></h3><p>表单设计成人与人对话的有利于用户的思考，注意以下几点：</p>
+<ul>
+<li>不要不停向用户问一连串的问题，而应该在问的过程中让用户了解网站是谁，为什么要问这问题；</li>
+<li>构建有意义的自然对话，即网站的表单要向人一样与用户交流，如’发卡行‘改成’哪家银行签发此文件‘会让用户更舒服；</li>
+<li>使用用户的语言，而非使用技术性的语言，上面的例子’签发‘改成’哪家银行给的文件‘更容易理解；</li>
+<li>最后，并不一所有情况一定都要用句子的形式，当问题很清楚的时候可以使用短词作为描述，只有当问题不清晰的时候才能句子。<br><a name="mxF1q"></a><h3 id="组织内容"><a href="#组织内容" class="headerlink" title="组织内容"></a><strong>组织内容</strong></h3>如果表单内容较多，可以对其进行分组，可分为多页或一个页面多个部分。具体分几页则需要视情境而定，每页或每个模块视为一个主题，主题与主题之间需要形成有意义的对话。通常情况下主题之间形成一定的顺序。<br><a name="5s2uF"></a><h3 id="归纳区别"><a href="#归纳区别" class="headerlink" title="归纳区别"></a><strong>归纳区别</strong></h3>为了显示内容组之间的区别，很多网站会用大量的视觉效果，但是其实只需要使用最小的视觉效果就可达到目的。同时这样有助于保持焦点在内容而非设计上。在设计时尽量使用信息本身产生的差异自然形成区别。<br><a name="HlXIt"></a><h2 id="完成之路"><a href="#完成之路" class="headerlink" title="完成之路"></a><strong>完成之路</strong></h2>没人会喜欢表单，人们完成表单只是为了要完成之后的东西：购物、使用服务等，那么说明完成表单的路径至关重要。<br><a name="ImsDI"></a><h2 id="表单的命名"><a href="#表单的命名" class="headerlink" title="表单的命名"></a><strong>表单的命名</strong></h2>表单的名称需要解释人们在填什么表单，填完后能干什么。点击的链接名要和表单名称一致，这样人们能知道正确的位置。<br><a name="CIihN"></a><h2 id="起始页"><a href="#起始页" class="headerlink" title="起始页"></a><strong>起始页</strong></h2>正确的命名可以让人们从正确的位置开始，但往往还要额外的信息告诉人位如何开始。起始页说明用户需要填写的内容、时间、注意事项等。当然只有当表单过长才需要，如果表单能马上让人知道答案就显示累赘。<br><a name="fi529"></a><h2 id="清晰的浏览线"><a href="#清晰的浏览线" class="headerlink" title="清晰的浏览线"></a><strong>清晰的浏览线</strong></h2>如果用户的浏览路径是一条直线那么就能快速对问题做出答复，完成任务的时间最少。良好的设计应该满足标签/输入框之间的平衡，视觉能在表单间自然的移动。<br><a name="32U8f"></a><h2 id="注意力分散最少"><a href="#注意力分散最少" class="headerlink" title="注意力分散最少"></a><strong>注意力分散最少</strong></h2>剔除与表单填写没有直接关系的界面元素，有助于保持人们完成任务。即使像返回主页等在一般页面上属于重要元素，在表单页面也尽量减少以防止用户离开。<br><a name="aobEf"></a><h2 id="进程指示"><a href="#进程指示" class="headerlink" title="进程指示"></a><strong>进程指示</strong></h2>如果表单是在多个页面那么显示完成进度会很有用。可以对主题编号显示完成的进度的。但是如果完成步骤并不是明确的，如在完成表单会多出一个步骤的情况则不用编号的方式，可以笼统的进程显示。<br> </li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/undefined/产品方法/关于详情页对齐方式分析/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    关于详情页对齐方式分析
+                
+            </div>
+        </a>
+    
+    
+        <a href="/undefined/产品方法/设计搜索界面，你需要考虑这20个细节/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">设计搜索界面，你需要考虑这20个细节</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            John Doe &copy; 2019 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>设计搜索界面，你需要考虑这20个细节 | Pmlibrary</title>
+    
+    
+        <meta name="keywords" content="设计搜索界面，你需要考虑这20个细节">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="这篇文章是我们在设计解决方案以及我们在原型设计时应该考虑的元素清单之前，应该回答的问题集合。（文章内容来自人人都是产品经理SKYUI专栏网站http://www.woshipm.com/pd/1038062.html，如有侵犯版权请联系xiong_cx@outlook.com删除，谢谢。）问用户有哪些问题？原型开发时应该考虑什么？什么是界面搜索设计的最佳实践?根据不同项目，搜索可能是最复杂的功能之">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计搜索界面，你需要考虑这20个细节">
+<meta property="og:url" content="http://yoursite.com/undefined/产品方法/设计搜索界面，你需要考虑这20个细节/index.html">
+<meta property="og:site_name" content="Pmlibrary">
+<meta property="og:description" content="这篇文章是我们在设计解决方案以及我们在原型设计时应该考虑的元素清单之前，应该回答的问题集合。（文章内容来自人人都是产品经理SKYUI专栏网站http://www.woshipm.com/pd/1038062.html，如有侵犯版权请联系xiong_cx@outlook.com删除，谢谢。）问用户有哪些问题？原型开发时应该考虑什么？什么是界面搜索设计的最佳实践?根据不同项目，搜索可能是最复杂的功能之">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093361-9769a9c5-9c1e-4561-96c4-f88d6535df4d.jpeg#align=left&display=inline&height=450&originHeight=450&originWidth=800&size=0&status=done&width=800">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093414-fa335a6f-01cb-4c19-b08a-521b6367a673.jpeg#align=left&display=inline&height=96&originHeight=96&originWidth=1200&size=0&status=done&width=1200">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093354-fbb8aa0a-da71-460c-aec8-a20ab81e7cc7.jpeg#align=left&display=inline&height=381&originHeight=381&originWidth=1200&size=0&status=done&width=1200">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093339-ba31a9ba-65a0-43a5-9d80-b5f3dfdce9e6.jpeg#align=left&display=inline&height=288&originHeight=288&originWidth=1200&size=0&status=done&width=1200">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093359-46f44396-c246-4005-a070-f14090a2fa39.jpeg#align=left&display=inline&height=293&originHeight=293&originWidth=1200&size=0&status=done&width=1200">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093379-39309c3c-fc96-4fdb-9150-37832b18ef6a.jpeg#align=left&display=inline&height=293&originHeight=293&originWidth=1200&size=0&status=done&width=1200">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093356-dd0e464d-a0c2-4ced-8be1-12989e1e606c.jpeg#align=left&display=inline&height=289&originHeight=289&originWidth=1200&size=0&status=done&width=1200">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093353-e887e6b4-14d5-4c30-8454-805170e45905.jpeg#align=left&display=inline&height=956&originHeight=956&originWidth=1500&size=0&status=done&width=1500">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093866-c9644076-0190-4a6c-893c-60ded6f7ddad.jpeg#align=left&display=inline&height=495&originHeight=495&originWidth=900&size=0&status=done&width=900">
+<meta property="og:updated_time" content="2019-07-06T12:03:15.529Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="设计搜索界面，你需要考虑这20个细节">
+<meta name="twitter:description" content="这篇文章是我们在设计解决方案以及我们在原型设计时应该考虑的元素清单之前，应该回答的问题集合。（文章内容来自人人都是产品经理SKYUI专栏网站http://www.woshipm.com/pd/1038062.html，如有侵犯版权请联系xiong_cx@outlook.com删除，谢谢。）问用户有哪些问题？原型开发时应该考虑什么？什么是界面搜索设计的最佳实践?根据不同项目，搜索可能是最复杂的功能之">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093361-9769a9c5-9c1e-4561-96c4-f88d6535df4d.jpeg#align=left&display=inline&height=450&originHeight=450&originWidth=800&size=0&status=done&width=800">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Pmlibrary" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Pmlibrary</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            tools
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/undefined/tools/用户体验地图/">用户体验地图</a></li>  <li class="file"><a href="/undefined/tools/UML建模/">UML建模</a></li>  <li class="file"><a href="/undefined/tools/GAP模型/"></a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            产品方法
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/undefined/产品方法/用户体验地图/">用户体验地图</a></li>  <li class="file"><a href="/undefined/产品方法/UML建模/">UML建模</a></li>  <li class="file"><a href="/undefined/产品方法/KANO 模型/">KANO 模型</a></li>  <li class="file"><a href="/undefined/产品方法/产品说明书/">产品说明书</a></li>  <li class="file"><a href="/undefined/产品方法/ORID读书模型/">ORID读书模型</a></li>  <li class="file"><a href="/undefined/产品方法/用户认知地图/">用户认知地图</a></li>  <li class="file"><a href="/undefined/产品方法/怎样才算写了一份好的产品说明书？/">怎样才算写了一份好的产品说明书？</a></li>  <li class="file"><a href="/undefined/产品方法/实例解析：怎么撰写一份产品数据报告/">实例解析：怎么撰写一份产品数据报告</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理常用工具清单/">产品经理常用工具清单</a></li>  <li class="file"><a href="/undefined/产品方法/移情图/">移情图</a></li>  <li class="file"><a href="/undefined/产品方法/卡牌模板及示例/">卡牌模板及示例</a></li>  <li class="file"><a href="/undefined/产品方法/如何撰写一份接地气的PRD文档/">如何撰写一份接地气的PRD文档</a></li>  <li class="file"><a href="/undefined/产品方法/GAP模型/">GAP模型</a></li>  <li class="file"><a href="/undefined/产品方法/如何准备pecha kucha/">如何准备pecha kucha</a></li>  <li class="file"><a href="/undefined/产品方法/产品分析方法论/">产品分析方法论</a></li>  <li class="file"><a href="/undefined/产品方法/软硬产品如何设计/">软硬产品如何设计</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理三大报告/">产品经理三大报告</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理三大文档/">产品经理三大文档</a></li>  <li class="file"><a href="/undefined/产品方法/半路子出家的产品经理，如何做项目管理/">半路子出家的产品经理，如何做项目管理</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理养成计划/">产品经理养成计划</a></li>  <li class="file"><a href="/undefined/产品方法/教你读懂机器学习/">教你读懂机器学习</a></li>  <li class="file"><a href="/undefined/产品方法/如何分析职场环境并破局——具体案例分析/">如何分析职场环境并破局——具体案例分析</a></li>  <li class="file"><a href="/undefined/产品方法/黑天鹅/">黑天鹅</a></li>  <li class="file"><a href="/undefined/产品方法/从点子到产品/">从点子到产品</a></li>  <li class="file"><a href="/undefined/产品方法/结网/">结网</a></li>  <li class="file"><a href="/undefined/产品方法/引导工具箱/">引导工具箱</a></li>  <li class="file"><a href="/undefined/产品方法/从”在看个人主页“来看社交推荐的发展/">从”在看个人主页“来看社交推荐的发展</a></li>  <li class="file active"><a href="/undefined/产品方法/设计搜索界面，你需要考虑这20个细节/">设计搜索界面，你需要考虑这20个细节</a></li>  <li class="file"><a href="/undefined/产品方法/WEB表单设计-结构篇/">WEB表单设计-结构篇</a></li>  <li class="file"><a href="/undefined/产品方法/关于详情页对齐方式分析/">关于详情页对齐方式分析</a></li>  <li class="file"><a href="/undefined/产品方法/PMP考试专区/">PMP考试专区</a></li>  <li class="file"><a href="/undefined/产品方法/NPDP考证专区/">NPDP考证专区</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-产品方法/设计搜索界面，你需要考虑这20个细节" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/产品方法/">产品方法</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/undefined/产品方法/设计搜索界面，你需要考虑这20个细节/">
+            <time datetime="2019-07-06T10:47:45.000Z" itemprop="datePublished">2019-07-06</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/raw/writing/source/_posts/产品方法/设计搜索界面，你需要考虑这20个细节.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/edit/writing/source/_posts/产品方法/设计搜索界面，你需要考虑这20个细节.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/commits/writing/source/_posts/产品方法/设计搜索界面，你需要考虑这20个细节.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            设计搜索界面，你需要考虑这20个细节
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p>这篇文章是我们在设计解决方案以及我们在原型设计时应该考虑的元素清单之前，应该回答的问题集合。（文章内容来自人人都是产品经理SKYUI专栏网站<a href="http://www.woshipm.com/pd/1038062.html，如有侵犯版权请联系xiong_cx@outlook.com删除，谢谢。）" target="_blank" rel="noopener">http://www.woshipm.com/pd/1038062.html，如有侵犯版权请联系xiong_cx@outlook.com删除，谢谢。）</a><br><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093361-9769a9c5-9c1e-4561-96c4-f88d6535df4d.jpeg#align=left&amp;display=inline&amp;height=450&amp;originHeight=450&amp;originWidth=800&amp;size=0&amp;status=done&amp;width=800" alt><br>问用户有哪些问题？原型开发时应该考虑什么？什么是界面搜索设计的最佳实践?<br>根据不同项目，搜索可能是最复杂的功能之一。用户虽然仅看到一个盒子，但实际上在这个盒子背后有一个复杂的系统，设计师和开发人员有大量的工作。<br>这篇文章是我们在设计解决方案以及我们在原型设计时应该考虑的元素清单之前，应该回答的问题集合。<br><a name="8xyTY"></a></p>
+<h2 id="一、观察并提出问题"><a href="#一、观察并提出问题" class="headerlink" title="一、观察并提出问题"></a><strong>一、观察并提出问题</strong></h2><p>设计师在研究阶段需要回答8个问题，了解用户搜索的原因，他们何时以及如何形成搜索问题。<br><a name="XKhCX"></a></p>
+<h3 id="1-你的用户的信息需求和意图是什么？"><a href="#1-你的用户的信息需求和意图是什么？" class="headerlink" title="1. 你的用户的信息需求和意图是什么？"></a><strong>1. 你的用户的信息需求和意图是什么？</strong></h3><p>他们是否搜索到：</p>
+<ul>
+<li>导航，查找特定网页。</li>
+<li>查找具体信息（“布拉格天气”，“澳大利亚首都”）。</li>
+<li>寻求建议（“如何设计搜索界面”）。</li>
+<li>查找资源、应用程序及文档。</li>
+<li>查找事实，数据（“我们网站上有多少活跃用户？”）。</li>
+<li>收集来自不同来源的信息。</li>
+<li><p>数据分析。<br><a name="mFmJi"></a></p>
+<h3 id="2-用户在什么时候点击搜索？"><a href="#2-用户在什么时候点击搜索？" class="headerlink" title="2. 用户在什么时候点击搜索？"></a><strong>2. 用户在什么时候点击搜索？</strong></h3><p><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093414-fa335a6f-01cb-4c19-b08a-521b6367a673.jpeg#align=left&amp;display=inline&amp;height=96&amp;originHeight=96&amp;originWidth=1200&amp;size=0&amp;status=done&amp;width=1200" alt></p>
+</li>
+<li><p>他们在点击搜索之前做了什么？</p>
+</li>
+<li>他们跟谁讨论过？</li>
+<li><p>在切换到搜索之前他们用了哪些应用程序？<br><a name="7TuRx"></a></p>
+<h3 id="3-用户如何形成搜索问题？"><a href="#3-用户如何形成搜索问题？" class="headerlink" title="3. 用户如何形成搜索问题？"></a><strong>3. 用户如何形成搜索问题？</strong></h3><p>搜索交互是一个对话过程。如果你知道用户如何开始对话，便可以给他们正确的答案。<br><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093354-fbb8aa0a-da71-460c-aec8-a20ab81e7cc7.jpeg#align=left&amp;display=inline&amp;height=381&amp;originHeight=381&amp;originWidth=1200&amp;size=0&amp;status=done&amp;width=1200" alt><br><br><a name="g1X7d"></a></p>
+<h3 id="4-用户是否确切地知道他们所找的东西？或者他们仅是单纯地浏览？"><a href="#4-用户是否确切地知道他们所找的东西？或者他们仅是单纯地浏览？" class="headerlink" title="4. 用户是否确切地知道他们所找的东西？或者他们仅是单纯地浏览？"></a><strong>4. 用户是否确切地知道他们所找的东西？或者他们仅是单纯地浏览？</strong></h3><p>例如，研究关于友谊的课题，寻找任何相关的书籍，或者寻找一本特定的书籍。我希望这两个请求有不同的结果。<br><a name="rcY4E"></a></p>
+<h3 id="5-用户期望找到什么？"><a href="#5-用户期望找到什么？" class="headerlink" title="5. 用户期望找到什么？"></a><strong>5. 用户期望找到什么？</strong></h3></li>
+<li><p>他们是否能描述期望的搜索结果是什么？</p>
+</li>
+<li><p>他们还能找到这些信息吗？<br><a name="GboRe"></a></p>
+<h3 id="6-接下来的步骤是什么？"><a href="#6-接下来的步骤是什么？" class="headerlink" title="6. 接下来的步骤是什么？"></a><strong>6. 接下来的步骤是什么？</strong></h3></li>
+<li><p>他们对结果会做什么？</p>
+</li>
+<li>如果没有找到他们正在寻找的东西，用户会怎么做？</li>
+<li>如何让搜索适应他们的工作流程？<br><a name="emkGJ"></a><h3 id="7-用户操作是否存在模式？"><a href="#7-用户操作是否存在模式？" class="headerlink" title="7. 用户操作是否存在模式？"></a><strong>7. 用户操作是否存在模式？</strong></h3>用户行为中的模式描述了用户如何进行搜索交互，他们所期望的结果及他们接下来的步骤。在重新设计现有界面时，模式是非常重要的。<br>在《搜索模式》和《用户界面搜索》中，作者描述了这些常见的搜索模式和模型：<br><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093339-ba31a9ba-65a0-43a5-9d80-b5f3dfdce9e6.jpeg#align=left&amp;display=inline&amp;height=288&amp;originHeight=288&amp;originWidth=1200&amp;size=0&amp;status=done&amp;width=1200" alt><br>退出模式：用户输入查询&gt;查看结果&gt;退出<br><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093359-46f44396-c246-4005-a070-f14090a2fa39.jpeg#align=left&amp;display=inline&amp;height=293&amp;originHeight=293&amp;originWidth=1200&amp;size=0&amp;status=done&amp;width=1200" alt><br>狭窄的格局：用户输入查询&gt;查看结果&gt;将其缩小<br><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093379-39309c3c-fc96-4fdb-9150-37832b18ef6a.jpeg#align=left&amp;display=inline&amp;height=293&amp;originHeight=293&amp;originWidth=1200&amp;size=0&amp;status=done&amp;width=1200" alt><br>优先第一模式：用户输入查询&gt;查看结果&gt;打开第一个链接之一<br><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093356-dd0e464d-a0c2-4ced-8be1-12989e1e606c.jpeg#align=left&amp;display=inline&amp;height=289&amp;originHeight=289&amp;originWidth=1200&amp;size=0&amp;status=done&amp;width=1200" alt><br>珍珠增长模式：用户输入查询&gt;打开其中一个结果&gt;打开文档中的相关链接或使用文档中的词汇查询<br>在Searchpatterns.org或Medium的搜索模式（查找具有示例的常见模式列表）中查找更多模式。<br><a name="ILcOA"></a><h3 id="8-他们会使用什么应用程序？"><a href="#8-他们会使用什么应用程序？" class="headerlink" title="8. 他们会使用什么应用程序？"></a><strong>8. 他们会使用什么应用程序？</strong></h3>如果你的产品是工作流程的一部分，其他工具可能会影响用户的习惯和对其用户体验的期望。详细了解他们这些工具中的搜索如何进行交互，以及最有效的交互方式。<br><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093353-e887e6b4-14d5-4c30-8454-805170e45905.jpeg#align=left&amp;display=inline&amp;height=956&amp;originHeight=956&amp;originWidth=1500&amp;size=0&amp;status=done&amp;width=1500" alt><br>询问并了解他们的搜索交互方式<br>询问用户是一种可以帮助你与用户建立联系，并在正确的时间直接向其提问的一种工具。<br><a name="Aftnj"></a><h2 id="二、检查列表：每部分的搜索考虑"><a href="#二、检查列表：每部分的搜索考虑" class="headerlink" title="二、检查列表：每部分的搜索考虑"></a><strong>二、检查列表：每部分的搜索考虑</strong></h2>搜索有更多的组件不止满足视觉。这个检查列表帮助原型更快，不会让你忘记任何东西。<br>*免责声明：此列表仅包含交互元素，不考虑算法、搜索行为、结果的速度或质量，仅考虑桌面搜索界面。移动搜索在许多方面有所不同，需要自己的博客文章。<br><a name="FX7Ez"></a><h3 id="1-结果页面"><a href="#1-结果页面" class="headerlink" title="1.结果页面"></a><strong>1.结果页面</strong></h3><strong>（1）结果类型</strong></li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/350999/1562410093866-c9644076-0190-4a6c-893c-60ded6f7ddad.jpeg#align=left&amp;display=inline&amp;height=495&amp;originHeight=495&amp;originWidth=900&amp;size=0&amp;status=done&amp;width=900" alt></p>
+<p>视频、事件、音频、位置、图表<br>在你的网站上有哪些类型的信息是可用？哪些类型可以搜索？如何在结果页面上更好地显示不同的类型？<br><strong>（2）可视化结果</strong><br>1）表单或列表</p>
+<p><a href="https://paper.dropbox.com/" target="_blank" rel="noopener">Paper.dropbox.com</a><br>2）卡片</p>
+<p>Pinterest.com<br>3）可调节视图</p>
+<p>Bookmate.com<br>4）分面导航<br>基于信息架构将搜索结果划分为逻辑组，使浏览体验更加舒适。</p>
+<blockquote>
+<p>“分面导航无疑是过去十年中最重要的搜索创新。”<br>——Jeffery Callender，Peter Morville</p>
+</blockquote>
+<p>Spotify的：</p>
+<p><strong>（3）页面上的项目数量</strong><br>用户一次能看到多少结果？我们能否通过提供替代视图和排序来让他们舒适地安排结果？<br>1）查看设置</p>
+<p>Ebay.com<br>2）分类</p>
+<p>Ikea.com<br>3）分页<br>4）加载</p>
+<p>Asos.com<br>5）无限滚动</p>
+<p>无限滚动的Duckduckgo.com<br>6）组合<br><strong>（4）预览</strong><br>这是一个经过深入研究的部分界面。最佳实践告诉我们在搜索结果中包含哪些内容？<br>1）预览中要突出显示查询术语</p>
+<p>iBooks<br>2）帮助区分结果的文档总结</p>
+<p>Ataccama.com<br>3）页面预览</p>
+<p>Youtube.com<br><strong>（5）可访问性</strong><br>确保每个用户都可以轻松地使用我们的产品是我们工作。搜索结果是否可通过文字转语音服务进阅读？字体大小和对比度是否可读？人们能否在一个晴朗天移动显示屏上进行阅读？所使用的颜色是否可以被所有人识别？<br><strong>（6）快捷键</strong><br>一些公司将结果预览展示给下一个可用性级别，在不离开结果页面的情况下向用户提供必需的最少量信息和功能。<br></p>
+<pre><code>&lt;br /&gt;
+
+&lt;br /&gt;Google&lt;br /&gt;**（7）可操作**&lt;br /&gt;我们如何帮助用户更便捷地完成工作？比如，让用户在不离开结果页面的情况下有机会开始处理他们正在查找的项目。
+</code></pre><p>Spotify<br>这些是一些常见的行为。它们在不同产品中可能会有很大差异：</p>
+<ul>
+<li>分享</li>
+<li>保存结果，书签，添加到愿望清单</li>
+<li>添加到购物车</li>
+</ul>
+<p>应用商店：</p>
+<ul>
+<li>评论</li>
+<li>预览图库</li>
+<li>批量操作</li>
+</ul>
+<p>Dropbox paper<br><strong>（8） 界面反馈</strong><br>1）加载图标或进度指示器</p>
+<p>Skyscanner<br>2）有关搜索过程的信息（结果，时间，应用过滤器）</p>
+<p>Fights.yandex.com</p>
+<ul>
+<li>系统通知（例如，如果对搜索结果的时间敏感，用户需要重新刷新页面）</li>
+<li>未找到页面</li>
+</ul>
+<p>Skyscanner.net<br>3）微交互<br><strong>（9）历史搜索记录</strong></p>
+<ul>
+<li>最近的查询</li>
+<li>最受欢迎的查询</li>
+</ul>
+<p><strong>（10）过滤和分类</strong><br>过滤器有自己的博客文章。设计复杂的网站时，定义明确的过滤器非常重要。他们会让搜索体验更流畅。</p>
+<p>Booking.com</p>
+<ul>
+<li>类别及其间隔尺寸</li>
+<li>标签</li>
+<li>过滤器类型</li>
+<li>布局</li>
+<li>操作（保存并编辑自定义过滤器）</li>
+<li>分类</li>
+</ul>
+<p><strong>（11）定制化服务</strong><br>如果搜索是应用程序中的关键功能，并且是用户工作流程中的重要组成部分，那定制对他们来说非常重要。可以允许用户调整结果页面布局，更改字体和颜色，定义页面上显示的结果数量，保存过滤器，自定义分类参数或添加行动号召。</p>
+<p>谷歌搜索</p>
+<p>Aliexpress.com<br><strong>（12） 个性化</strong><br>用户设置、之前的查询、偏好及其他有关用户的信息如何改善搜索体验。<br><strong>（13）快捷键</strong><br>一组键盘快捷键可以更轻松地浏览搜索结果。<br><strong>（14）相关指示器</strong><br>根据内容的类型，结果的精确程度及结果相关性的差距，相关性指标有助于加快决策速度。<br><a name="GRcSu"></a></p>
+<h3 id="2-搜索框检查列表"><a href="#2-搜索框检查列表" class="headerlink" title="2.搜索框检查列表"></a><strong>2.搜索框检查列表</strong></h3><p><strong>（1）可视化</strong></p>
+<ul>
+<li>定位搜索框</li>
+<li>行动号召</li>
+<li>图标</li>
+<li>单个或多个输入字段</li>
+</ul>
+<p>Franzen和Karlgren在2000年发现：向研究参与者展示更广泛的报名表格，鼓励他们输入更长的查询。用户搜索界面。<br><strong>（2）输入类型</strong><br>你支持什么类型的搜索输入？</p>
+<ul>
+<li>文本</li>
+<li>音频</li>
+<li>图像</li>
+<li>标签</li>
+</ul>
+<p><strong>（3）帮助</strong><br>1）搜索提示。向用户展示搜索的全部的可能性。</p>
+<p>Stackoverflow.com<br>2）输入字段中的默认文本</p>
+<p>Imdb.com<br><strong>（4）自动完成</strong><br>自动完成功能可以成为快速高效地进行搜索互动的强大工具。</p>
+<p>Fullstory.com</p>
+<ul>
+<li>预先定义的自动填充会提示最近或当下流行的查询、过滤器、标签或播放导航角色。</li>
+<li>结构化建议可帮助用户浏览复杂的网页。</li>
+</ul>
+<p>Twitch.tv<br><strong>（5） 微交互</strong></p>
+<ul>
+<li>加载</li>
+<li>错误消息</li>
+<li>系统通知</li>
+<li>快速清除查询的方法</li>
+</ul>
+<p>Google驱动<br><strong>（6） 高级搜索</strong><br>如果有许多用于查找项目的参数，则可以考虑使用高级搜索选项和逻辑操作。<br>例如：我想找到住在柏林的所有客户，并在上个月进行了购买，年龄在45-60岁之间。<br>我们如何用界面支持这些类型的查询？<br>1）逻辑运作</p>
+<p><a href="https://confluence.atlassian.com/jirasoftwareserver075/advanced-searching-935562904.html" target="_blank" rel="noopener">Confluence</a><br>2）基于高级搜索的界面</p>
+<p><a href="https://www.fullstory.com/" target="_blank" rel="noopener">Fullstory</a><br>设计跨渠道搜索体验：<br>设计多种设备是设计过程中至关重要的一部分。我不会在这里讨论这个话题，但你可以在Tony Russell-Rose和Tyler Tate的《设计搜索体验》中阅读更多内容。<br><a name="pb7yr"></a></p>
+<h2 id="三、小贴士"><a href="#三、小贴士" class="headerlink" title="三、小贴士"></a><strong>三、小贴士</strong></h2><p>搜索是一个复杂且昂贵的功能，技术限制在设计中发挥重要作用。<br>这就是为什么一开始涉及研发团队（等同于研究阶段）是非常重要，该团队了解用户需求并帮助你寻找最佳解决方案。<br><a name="Rb78v"></a></p>
+<h3 id="搜索界面案例"><a href="#搜索界面案例" class="headerlink" title="搜索界面案例"></a><strong>搜索界面案例</strong></h3><ul>
+<li><a href="https://swiftype.com/enterprise-search" target="_blank" rel="noopener">Swiftype</a></li>
+<li><a href="https://www.algolia.com/" target="_blank" rel="noopener">Algolia</a></li>
+<li><a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener">Jira Atlassian</a></li>
+<li><a href="https://www.fullstory.com/" target="_blank" rel="noopener">FullStory</a></li>
+<li>Mac OS finder</li>
+<li><a href="https://www.jetbrains.com/youtrack/" target="_blank" rel="noopener">YouTrack</a></li>
+<li><a href="https://www.skyscanner.net/" target="_blank" rel="noopener">Skyscanner</a></li>
+<li><a href="https://www.google.com/drive/" target="_blank" rel="noopener">Google Drive</a></li>
+<li><a href="https://slack.com/lp/two" target="_blank" rel="noopener">Slack</a></li>
+<li><a href="https://www.spotify.com/cz/" target="_blank" rel="noopener">Spotify</a></li>
+<li><a href="https://www.cars.com/" target="_blank" rel="noopener">com</a></li>
+<li><a href="https://www.zillow.com/" target="_blank" rel="noopener">Zillow</a></li>
+<li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+<li><a href="http://www.vw.com/models/" target="_blank" rel="noopener">VW Model Lineup</a></li>
+<li><a href="https://www.aliexpress.com/" target="_blank" rel="noopener">com</a></li>
+<li><a href="https://www.amazon.com/" target="_blank" rel="noopener">com</a></li>
+<li><a href="https://www.goodreads.com/" target="_blank" rel="noopener">Goodreads</a></li>
+<li><a href="http://www.imdb.com/" target="_blank" rel="noopener">IMDb</a></li>
+<li><a href="https://flights.yandex.com/" target="_blank" rel="noopener">Yandex Flights</a></li>
+<li><p><a href="https://www.twitch.tv/" target="_blank" rel="noopener">Twitch</a></p>
+<p><br>原文作者：Nadya Tsech<br>原文地址：<a href="https://uxplanet.org/search-interface-20-things-to-consider-4b1466e98881" target="_blank" rel="noopener">https://uxplanet.org/search-interface-20-things-to-consider-4b1466e98881</a><br> </p>
+</li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/undefined/产品方法/WEB表单设计-结构篇/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    WEB表单设计-结构篇
+                
+            </div>
+        </a>
+    
+    
+        <a href="/undefined/产品方法/从”在看个人主页“来看社交推荐的发展/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">从”在看个人主页“来看社交推荐的发展</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            John Doe &copy; 2019 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

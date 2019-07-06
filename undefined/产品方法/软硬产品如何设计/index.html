@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>软硬产品如何设计 | Pmlibrary</title>
+    
+    
+        <meta name="keywords" content="软硬产品如何设计">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="前言硬件设备的寿命一般都超过了消费电子产品，手机可能2-3年内就会大量更换，但是硬件设备的寿命可能5年甚至更长时间。我就见到过一个客户用着我们5年前的产品，甚至还有7年前用的扫描仪。尽管传统的硬件产品数量或热门程度虽不及智能硬件火爆，但一样值得关注。传统硬件更多是B端或者行业专用产品，智能硬件更多是C端。 一、市场调研与需求管理市场调研和需求管理是在软硬件产品设计之前需要完成的，这部分工作需要产">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软硬产品如何设计">
+<meta property="og:url" content="http://yoursite.com/undefined/产品方法/软硬产品如何设计/index.html">
+<meta property="og:site_name" content="Pmlibrary">
+<meta property="og:description" content="前言硬件设备的寿命一般都超过了消费电子产品，手机可能2-3年内就会大量更换，但是硬件设备的寿命可能5年甚至更长时间。我就见到过一个客户用着我们5年前的产品，甚至还有7年前用的扫描仪。尽管传统的硬件产品数量或热门程度虽不及智能硬件火爆，但一样值得关注。传统硬件更多是B端或者行业专用产品，智能硬件更多是C端。 一、市场调研与需求管理市场调研和需求管理是在软硬件产品设计之前需要完成的，这部分工作需要产">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562408963064-40e4dcb6-14f5-4d1e-811b-c9ad08493c89.png#align=left&display=inline&height=301&originHeight=301&originWidth=1127&size=0&status=done&width=1127">
+<meta property="og:updated_time" content="2019-07-06T12:03:15.536Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="软硬产品如何设计">
+<meta name="twitter:description" content="前言硬件设备的寿命一般都超过了消费电子产品，手机可能2-3年内就会大量更换，但是硬件设备的寿命可能5年甚至更长时间。我就见到过一个客户用着我们5年前的产品，甚至还有7年前用的扫描仪。尽管传统的硬件产品数量或热门程度虽不及智能硬件火爆，但一样值得关注。传统硬件更多是B端或者行业专用产品，智能硬件更多是C端。 一、市场调研与需求管理市场调研和需求管理是在软硬件产品设计之前需要完成的，这部分工作需要产">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562408963064-40e4dcb6-14f5-4d1e-811b-c9ad08493c89.png#align=left&display=inline&height=301&originHeight=301&originWidth=1127&size=0&status=done&width=1127">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Pmlibrary" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Pmlibrary</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            tools
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/undefined/tools/用户体验地图/">用户体验地图</a></li>  <li class="file"><a href="/undefined/tools/UML建模/">UML建模</a></li>  <li class="file"><a href="/undefined/tools/GAP模型/"></a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            产品方法
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/undefined/产品方法/用户体验地图/">用户体验地图</a></li>  <li class="file"><a href="/undefined/产品方法/UML建模/">UML建模</a></li>  <li class="file"><a href="/undefined/产品方法/KANO 模型/">KANO 模型</a></li>  <li class="file"><a href="/undefined/产品方法/产品说明书/">产品说明书</a></li>  <li class="file"><a href="/undefined/产品方法/ORID读书模型/">ORID读书模型</a></li>  <li class="file"><a href="/undefined/产品方法/用户认知地图/">用户认知地图</a></li>  <li class="file"><a href="/undefined/产品方法/怎样才算写了一份好的产品说明书？/">怎样才算写了一份好的产品说明书？</a></li>  <li class="file"><a href="/undefined/产品方法/实例解析：怎么撰写一份产品数据报告/">实例解析：怎么撰写一份产品数据报告</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理常用工具清单/">产品经理常用工具清单</a></li>  <li class="file"><a href="/undefined/产品方法/移情图/">移情图</a></li>  <li class="file"><a href="/undefined/产品方法/卡牌模板及示例/">卡牌模板及示例</a></li>  <li class="file"><a href="/undefined/产品方法/如何撰写一份接地气的PRD文档/">如何撰写一份接地气的PRD文档</a></li>  <li class="file"><a href="/undefined/产品方法/GAP模型/">GAP模型</a></li>  <li class="file"><a href="/undefined/产品方法/如何准备pecha kucha/">如何准备pecha kucha</a></li>  <li class="file"><a href="/undefined/产品方法/产品分析方法论/">产品分析方法论</a></li>  <li class="file active"><a href="/undefined/产品方法/软硬产品如何设计/">软硬产品如何设计</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理三大报告/">产品经理三大报告</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理三大文档/">产品经理三大文档</a></li>  <li class="file"><a href="/undefined/产品方法/半路子出家的产品经理，如何做项目管理/">半路子出家的产品经理，如何做项目管理</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理养成计划/">产品经理养成计划</a></li>  <li class="file"><a href="/undefined/产品方法/教你读懂机器学习/">教你读懂机器学习</a></li>  <li class="file"><a href="/undefined/产品方法/如何分析职场环境并破局——具体案例分析/">如何分析职场环境并破局——具体案例分析</a></li>  <li class="file"><a href="/undefined/产品方法/黑天鹅/">黑天鹅</a></li>  <li class="file"><a href="/undefined/产品方法/从点子到产品/">从点子到产品</a></li>  <li class="file"><a href="/undefined/产品方法/结网/">结网</a></li>  <li class="file"><a href="/undefined/产品方法/引导工具箱/">引导工具箱</a></li>  <li class="file"><a href="/undefined/产品方法/从”在看个人主页“来看社交推荐的发展/">从”在看个人主页“来看社交推荐的发展</a></li>  <li class="file"><a href="/undefined/产品方法/设计搜索界面，你需要考虑这20个细节/">设计搜索界面，你需要考虑这20个细节</a></li>  <li class="file"><a href="/undefined/产品方法/WEB表单设计-结构篇/">WEB表单设计-结构篇</a></li>  <li class="file"><a href="/undefined/产品方法/关于详情页对齐方式分析/">关于详情页对齐方式分析</a></li>  <li class="file"><a href="/undefined/产品方法/PMP考试专区/">PMP考试专区</a></li>  <li class="file"><a href="/undefined/产品方法/NPDP考证专区/">NPDP考证专区</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-产品方法/软硬产品如何设计" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/产品方法/">产品方法</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/undefined/产品方法/软硬产品如何设计/">
+            <time datetime="2019-07-06T10:28:57.000Z" itemprop="datePublished">2019-07-06</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/raw/writing/source/_posts/产品方法/软硬产品如何设计.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/edit/writing/source/_posts/产品方法/软硬产品如何设计.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/commits/writing/source/_posts/产品方法/软硬产品如何设计.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            软硬产品如何设计
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p><a name="F8GFH"></a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>硬件设备的寿命一般都超过了消费电子产品，手机可能2-3年内就会大量更换，但是硬件设备的寿命可能5年甚至更长时间。我就见到过一个客户用着我们5年前的产品，甚至还有7年前用的扫描仪。<br>尽管传统的硬件产品数量或热门程度虽不及智能硬件火爆，但一样值得关注。传统硬件更多是B端或者行业专用产品，智能硬件更多是C端。<br><a name="cZtv4"></a></p>
+<h1 id="一、市场调研与需求管理"><a href="#一、市场调研与需求管理" class="headerlink" title="一、市场调研与需求管理"></a>一、市场调研与需求管理</h1><p>市场调研和需求管理是在软硬件产品设计之前需要完成的，这部分工作需要产品经理、市场和销售团队共同完成，可以是产品经理独自或者主导。<br>开完需求评审会之后，由产品经理产出需求文档给硬件团队和软件团队。<br>如果新产品是原有产品的延续，那么通过销售、客户、技术支持、售后的反馈就能够获取到足够多的需求，但这时候也不要忽视对竞争对手的关注。如果是要做一个从0-1的产品，市场调研将会特别重要，这直接决定产品的成与败。<br><a name="qTeog"></a></p>
+<h1 id="二、产品开发流程–硬件部分"><a href="#二、产品开发流程–硬件部分" class="headerlink" title="二、产品开发流程–硬件部分"></a>二、产品开发流程–硬件部分</h1><p>硬件部分包含id设计，模具设计，结构设计，电子设计，固件设计，手板制作及验证，小批量试产，批量生产等环节。<br>一般来说，硬件团队都是公司现有的，不会轻易重组。这一点跟软件不一样，软件可能会牵涉到团队打散重建。<br><a name="1Etu8"></a></p>
+<h2 id="ID设计"><a href="#ID设计" class="headerlink" title="ID设计"></a>ID设计</h2><p>由于我负责的并非是0-1的产品，故不存在完全重新设计ID。我负责的阅读器是非常成熟的产品，市面上可见得阅读器外观功能结构都大同小异，这一点一方面是行业发展需要，一方面是大家相互借鉴。故对ID设计只输出若干参数，比如大致尺寸要求（宽度、高度、深度），必要的部件或组件（比如采集图像窗口、挡板等等）。然后提供竞争对手产品图，并讲解现有产品和竞争对手使用或设计点，帮助设计师理解。最终设计师会产出几种不同类型的ID进行评审。<br><a name="21phn"></a></p>
+<h2 id="结构设计和电子设计"><a href="#结构设计和电子设计" class="headerlink" title="结构设计和电子设计"></a>结构设计和电子设计</h2><p>这两部分的结合是非常密切的，做结构设计时要给电子器件留有足够的空间，并且要考虑到整体硬件，电子器件的组装拆卸维修。在这个环节中，结构设计工程师要与电子设计工程师密切沟通。<br>电子设计特制一些电子器件的选型PCB，电路设计这部分，相对的固件设计是另外一些人来做。<br>电子设计涵盖了电源设计，通讯接口设计（蓝牙，usb，wifi，wlan）及后续的PCBA。电子设计师需要对工厂打样回来的PCBA进行测试和验证。<br>在我们公司，结构设计师和电子设计师在一个团队中，他们会频繁地沟通以确能够产出合格产品。<br><a name="U4s2M"></a></p>
+<h2 id="固件设计"><a href="#固件设计" class="headerlink" title="固件设计"></a>固件设计</h2><p>固件设计可能是最早开始工作的团队之一，他们承担着硬件程序开发(即固件），并且为应用层提供相关的DLL接口以便应用层能够调用到相关的模块。此外，他们还要负责部分电子器件的选项。需要某些功能可能只有特定的一些组件，常见的比如大量开发版可能只支持几个不同类型的摄像头，那么可选范围就非常窄。经过功能验证之后，他们需要考虑硬件方案。对于智能硬件或者硬件厂商，通常有两种做法，一种是购买现成的核心板后设计周边模块，一种是只购买芯片自行设计核心板和周边模块。对于硬件团队能力雄厚的可能采用方案二，对于普通的硬件团队采用方案一更为合适，因为初创团队不见得有那么充足的资金和时间完成所有事情。<br>这样的好处是短平快。<br>这个阶段的产物是固件和模块形态，最终与结构电子设计师共同确认。<br>现在市面上有很多开发板，比如RK3288开发板、智能音响开发板。固件设计团队在早期功能验证时可以直接使用现成的开发板。待功能验证过后，再与电子设计团队制作核心板。<br><a name="mIhJI"></a></p>
+<h2 id="模具设计和试模"><a href="#模具设计和试模" class="headerlink" title="模具设计和试模"></a>模具设计和试模</h2><p>模具设计可以和手板制作同步进行（一般开模需要2个月左右的时间）。我们目前还是采用标准的模具设计方式，模具设计完成之后会进行试模，试模的目的是初步确认模具本身是否有问题。<br>试模常遇到的问题：</p>
+<ul>
+<li>脱模困难</li>
+<li>缩水</li>
+<li>模具刮伤产品</li>
+<li>气泡</li>
+<li>塑件翘曲和变形</li>
+</ul>
+<p>这些问题仅适用于注塑模具<br><a name="UqeVd"></a></p>
+<h2 id="手板制作验证"><a href="#手板制作验证" class="headerlink" title="手板制作验证"></a>手板制作验证</h2><p>结构设计完成之后，就可以手板制作。其实现在可以通过3D打印的方式去制作手板，但是目前我负责的这个硬件还是通过加工完成的。<br>手板必须要按照真实产品进行制作，包括外观、颜色、材质。一般一周到2周就能完成手板的制作。手板完成之后安装相关的电子器件，最终交付给软件团队进行软硬件联调。<br>手板验证可以分为3个步骤：</p>
+<ul>
+<li>外观、结构等确认，产品经理负责组织会议确认</li>
+<li>软硬件联调</li>
+<li>内部及种子客户试用</li>
+</ul>
+<p>对于一个新研发的硬件产品，越早进行内部和种子客户测试越好，如果能够及早发现硬件存在的问题，那么将节省大量的时间、物力和财力。<br><a name="uL4Ge"></a></p>
+<h2 id="小批量试产"><a href="#小批量试产" class="headerlink" title="小批量试产"></a>小批量试产</h2><p>试产的目标主要有下列几个：</p>
+<ul>
+<li>验证模具，在试产中可能存在模具损坏的问题（需要及时修复），如果模具本身有一定问题，可以小范围更改。如果改动较大，不仅需要支付费用，还耽误时间</li>
+<li>生产流程和工艺。由于工人对新产品的生产工艺和生产路程不熟悉，需要对产线工人进行相关培训，并且通过试产的方式帮助他们掌握相关流程和工艺。这个阶段需要生产负责人（比如生产经理）撰写相关的说明文档和操作流程</li>
+<li>质检和复检</li>
+<li>其它测评，比如跌落试验、震荡试验等等，模拟运输途中的各种测试；相关认证，比如过3C认证、公安部产品验证、FCC等等</li>
+<li>电子器件备货</li>
+</ul>
+<p>试产的数量不宜太多或过少，一般可以设定50、100个。数量太少，内部测试都不够用；数量太多，如果有问题，则会导致浪费。故设定在50或100。<br><a name="JPu17"></a></p>
+<h2 id="批量生产"><a href="#批量生产" class="headerlink" title="批量生产"></a>批量生产</h2><p>产品进入批量生产时，说明产品本身已经没有问题，生产的各个环节都已经非常明了，故可以正式生产。这个阶段主要是帮助公司掌握大致的生产周期，比如从下单生产到备料完成、到入库的所有时长。<br>批量生产之后多数情况下是没有大问题的，但是也有例外。比如我负责的这个产品在生产了2个批次之后，发现了使用上的遗憾（缺陷）。在前代产品中我们发现了光线会干扰到图像采集，为此增加了遮光罩的长度使其超过了整个采集区域。但是在某个大客户反馈，这个遮光罩影响操作且遮光罩的边缘内存有一定的锋利度，导致会划伤操作人员的皮肤。为此重新修改了整个遮光罩的设计（缩短、并且做成可以拆卸式的），但是付出了不小的代价（半年内都没有生成该类产品，后续的畅销导致了断货，最终让竞争对手占据了一些份额）<br><a name="NlJEX"></a></p>
+<h1 id="三、产品开发–软件部分"><a href="#三、产品开发–软件部分" class="headerlink" title="三、产品开发–软件部分"></a>三、产品开发–软件部分</h1><p>软件部分是整个产品中最为灵活的，但是由于硬件的寿命过于长，导致软件必须做到向下兼容，这也导致了SDK体积越来越庞大。随着新需求不断加入，软件开发的难度相对而言也越来越大，幸好公司有非常厉害的研发人员，才力保软件尽可能的灵活以适应新细分市场、新客户的需求。<br>软件部分就跟大部分的传统软件产品经理（有别与互联网产品经理）差不多了，对于一个存在多年的产品，产品经理日常工作中更多的是收集客户、销售反馈的需要（通用的和定制化的）和问题。在进行行业调研、分析的同时，支持协助销售进入一些细分市场领域，并为细分领域定制相关的软件或硬件。<br>硬件无法变动，那么能够定制的也就是只有软件。绝大部分定制的都是根据对方的API接口进行封装，以适应对方的调用。少数情况下需要我方根据客户的定制化需求，制作相关的软件（比如托盘程序）。<br>由于公司产品是以SDK的方式提供给下游的集成商进行集成，故软件部分特制SDK的开发。一般公司都会分为应用开发（SDK）、核心、算法引擎3部分，如果硬件产品本身没有造成核心功能的变动，那么只需要应用开发层做好设备挂接即可。如果牵涉到核心，那么需要核心做好适配后再提供给应用开发团队进行挂接。<br>整体而言，软件部分的挂接在手板做好后正式进入开发。前期主要是配合固件团队做一些工作，并提前做好软硬件的对接工作。<br>待软件部分完成之后，需要将软硬件都提供给测试团队进行测试，确认无误后再公司内部和种子客户中进行测试。<br><a name="SuDGZ"></a></p>
+<h1 id="四、产品营销和销售"><a href="#四、产品营销和销售" class="headerlink" title="四、产品营销和销售"></a>四、产品营销和销售</h1><p>产品正式上市或者销售之前，需要对销售渠道进行预热。预热的时候需要有产品介绍、产品彩页、宣传视频等等。这些工作都需要有一定的事情，比如我曾经协助市场经理做一个产品宣传视频，前前后后改了5版，从前期准备到最后完工，用时近2月。因此在试产之后并确定需要进行批量生产后，就要马上进入到此环节。<br>针对营销和推广部门，不仅需要提供产品照片、产品使用手册等素材便于他们制作产品彩页、宣传册、视频，还需要将产品的卖点、针对的行业告知营销和推广部门，以便他们针对性的线上或者线下推广（比如参加展会）。在宣传册、视频等制作阶段，产品经理要及时与相关工作负责人沟通，避免出现牛头不对马嘴的现象。<br>针对销售部门，同样告知产品的特点、针对的行业、产品卖点，并对他们培训产品的使用。如果可以，产品经理可以和销售人员一块制定整理产品的销售方案（比如行业解决方案），并且随同销售人员一块前往种子客户、潜在客户处做好产品推介。<br><a name="0Qboy"></a></p>
+<h1 id="五、技术支持和售后"><a href="#五、技术支持和售后" class="headerlink" title="五、技术支持和售后"></a>五、技术支持和售后</h1><p>智能硬件产品不会单独设立技术支持团队（一般技术支持的也少），往往售后承担了技术支持的工作。由于我负责的是B端产品，且以SDK的方式提供给客户。故技术支持和售后团队是分开的，技术支持主要是协助客户完成SDK挂接，售后团队主要对硬件进行维护/维修。如果技术支持团队不向产品经理汇报工作，那么建议产品经理定期与技术支持团队沟通，以掌握客户在集成、使用过程中遇到的问题或需求。<br>针对售后团队，需要做的工作有（主要由硬件部门进行培训和指导）：</p>
+<ul>
+<li>硬件团队（比如电子设计、结构设计）需要向售后团队提供交底书</li>
+<li>硬件团队针对售后团队提供培训，并提供指导手册和相关视频</li>
+<li>针对硬件中的关键部件、易损部件，硬件团队要指导售后团队完成硬件的维修</li>
+<li>软件团队要给售后团队提供相应的软件支持，比如设备检测软件等等</li>
+</ul>
+<p>售后团队能够掌握到硬件产品存在的问题，需要定期关注，比如按月与售后团队了解产品维修、维护情况（如果是新产品，可以先按周、半月，生产5-6批次之后，可以改为月）。</p>
+<ul>
+<li>对于产品质量问题，需要产经理协助相关团队完成质量改进</li>
+<li>如果是易耗品，那么需要考虑备货（各地的客服中心均需有一定量的备货）</li>
+<li>对于产品缺陷问题，则需要考虑怎么弥补修复。对于普通缺陷，一般尽可能通过软件解决，其次通过其它硬件解决（采用工程方法来解决），最终在下一版产品中彻底解决掉。对于严重的缺陷，可能需要从根上解决，无论花多大代价（这也是为什么要尽早让种子客户使用的缘故）</li>
+</ul>
+<p>针对技术支持团队（产品经理或软件团队）：</p>
+<ul>
+<li>培训产品的使用（硬件和配套软件的操作）</li>
+<li>介绍硬件产品各系别的功能差异</li>
+<li>培训新产品相关的SDK</li>
+<li>……</li>
+</ul>
+<p>技术支持和售后部分是产品用户体验两个非常明显的点，产品经理要时刻关注这两点，避免这两点造成产品体验性不好。<br><a name="joTlN"></a></p>
+<h2 id="产品升级"><a href="#产品升级" class="headerlink" title="产品升级"></a>产品升级</h2><p>如果该产品能够持续不断的盈利（增长的），那么该产品还是有可能进入到升级阶段。一般来说，伴随着市场的细分、市场环境的变化、竞争对手产品更新，势必要对产品进行更新以获取对竞争对手的优势或更好满足不同市场的需求。这样就该进入一轮新的循环。<br>新产品升级时务必要总结当前硬件存在的缺陷，避免重蹈覆辙。<br><a name="Pa55Z"></a></p>
+<h1 id><a href="#" class="headerlink" title=" "></a> </h1><p><a name="KUclb"></a></p>
+<h1 id="六、后记"><a href="#六、后记" class="headerlink" title="六、后记"></a>六、后记</h1><p>对于B端产品，除了上述要做的事情外，还需要注意点–用户体验性。与互联网产品不一样，B端产品的用户体验性要远复杂。如果互联网产品的用户体验性是几个点，那么B短产品就是一个面。B端产品的用户体验包括但不限于：</p>
+<ul>
+<li>软件部分的用户体验</li>
+<li>硬件部分的人机设计</li>
+<li>产品借用、购买体验（包含了商务、财务、销售）</li>
+<li>SDK挂接（技术支持）</li>
+<li>售后（售后）</li>
+<li>需求或定制化</li>
+<li>客服</li>
+<li>生产部门</li>
+<li>……</li>
+</ul>
+<p>重点：B端产品的用户体验绝不是某个、某几个部门的事情，是公司全体部门的事情，只有各个部门都以客户为中心，才能将产品的用户体验做到极致。<br>下面是一个甘特图，该甘特图只是用于展示各团队的进入产品开发的先后关系，长度不代表所需时间。<br>0-1的产品，市场调研在所有阶段之前。1-n的产品，在新产品诞生之后就一直需要持续不断地做市场调研并且整理需求。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562408963064-40e4dcb6-14f5-4d1e-811b-c9ad08493c89.png#align=left&amp;display=inline&amp;height=301&amp;originHeight=301&amp;originWidth=1127&amp;size=0&amp;status=done&amp;width=1127" alt><br>      <br>文章转载自<a href="https://www.pmcaff.com/user/profile/oyLPg355kA" target="_blank" rel="noopener">wweiru</a>链接地址为：<a href="https://coffee.pmcaff.com/article/gjky4RK5BM" target="_blank" rel="noopener">https://coffee.p</a></p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/undefined/产品方法/产品经理三大报告/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    产品经理三大报告
+                
+            </div>
+        </a>
+    
+    
+        <a href="/undefined/产品方法/产品分析方法论/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">产品分析方法论</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            John Doe &copy; 2019 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

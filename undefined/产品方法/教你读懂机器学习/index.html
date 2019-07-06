@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>教你读懂机器学习 | Pmlibrary</title>
+    
+    
+        <meta name="keywords" content="教你读懂机器学习">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="前言从AlphaGo战胜李世石开始，AI迎来了新一轮爆发增长，2018年，全球人工智能市场规模达到了73.5亿美元，各个行业和领域几乎都被AI渗透，各国对AI人才的争夺也正愈演愈烈，《中国人工智能发展报告2018》显示，专利上，中国已经成为全球人工智能专利布局最多的国家，数量略微领先于美国和日本；产业上，中国的人工智能企业数量排在全球第二，北京是全球人工智能企业最集中的城市；全球知名创投研究机构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="教你读懂机器学习">
+<meta property="og:url" content="http://yoursite.com/undefined/产品方法/教你读懂机器学习/index.html">
+<meta property="og:site_name" content="Pmlibrary">
+<meta property="og:description" content="前言从AlphaGo战胜李世石开始，AI迎来了新一轮爆发增长，2018年，全球人工智能市场规模达到了73.5亿美元，各个行业和领域几乎都被AI渗透，各国对AI人才的争夺也正愈演愈烈，《中国人工智能发展报告2018》显示，专利上，中国已经成为全球人工智能专利布局最多的国家，数量略微领先于美国和日本；产业上，中国的人工智能企业数量排在全球第二，北京是全球人工智能企业最集中的城市；全球知名创投研究机构">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507025-d1f7ff5b-5fc6-409f-b7c0-947e3f973f6a.png#align=left&display=inline&height=459&originHeight=459&originWidth=682&size=0&status=done&width=682">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507236-7612774e-053a-4146-9e7f-64f280672482.png#align=left&display=inline&height=292&originHeight=292&originWidth=942&size=0&status=done&width=942">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507010-57b50325-56f0-4685-bfc4-db90cb17e194.png#align=left&display=inline&height=606&originHeight=606&originWidth=720&size=0&status=done&width=720">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507260-84705412-ce73-441f-8c93-4ca2406da65c.png#align=left&display=inline&height=296&originHeight=296&originWidth=564&size=0&status=done&width=564">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409506989-aa84891a-ad2c-4c9d-98e0-177ce8fb9592.png#align=left&display=inline&height=127&originHeight=127&originWidth=605&size=0&status=done&width=605">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507015-5aad482e-0328-442a-b34f-9efefc8b5559.png#align=left&display=inline&height=581&originHeight=581&originWidth=599&size=0&status=done&width=599">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507031-2112faf7-f979-4a02-8a03-9417a24ca4a4.png#align=left&display=inline&height=174&originHeight=174&originWidth=613&size=0&status=done&width=613">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409506962-9f4d0d25-189a-4844-ba24-ee4751961b49.png#align=left&display=inline&height=146&originHeight=146&originWidth=629&size=0&status=done&width=629">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507122-a3738b4f-9293-466f-ba9b-aab28fd84b20.png#align=left&display=inline&height=413&originHeight=413&originWidth=657&size=0&status=done&width=657">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507042-eab73ba6-e190-4c38-86b0-ecaeb7c0301e.png#align=left&display=inline&height=350&originHeight=350&originWidth=554&size=0&status=done&width=554">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507279-f8fb5504-e430-4cad-ab02-882a4aa34de7.png#align=left&display=inline&height=194&originHeight=194&originWidth=554&size=0&status=done&width=554">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507076-210616ae-443e-46f2-981a-433f37ba94e1.png#align=left&display=inline&height=587&originHeight=587&originWidth=971&size=0&status=done&width=971">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507091-55064f24-5559-4ae4-b1fc-cb3b603375ae.png#align=left&display=inline&height=98&originHeight=98&originWidth=112&size=0&status=done&width=112">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507088-38d76067-5a75-4cd2-925e-659389d94e04.png#align=left&display=inline&height=283&originHeight=283&originWidth=763&size=0&status=done&width=763">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507029-18fdbba7-316e-4744-9de3-3b167bcafb0e.png#align=left&display=inline&height=461&originHeight=461&originWidth=853&size=0&status=done&width=853">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507052-07776299-4157-4a15-a9ae-ea0b6fac083e.png#align=left&display=inline&height=460&originHeight=460&originWidth=852&size=0&status=done&width=852">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507551-d6ebb16d-ef3d-4c34-a141-f4cadf21aee7.png#align=left&display=inline&height=463&originHeight=463&originWidth=857&size=0&status=done&width=857">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507185-949149bf-1056-4efe-8e5d-8f8a37d89850.png#align=left&display=inline&height=464&originHeight=464&originWidth=856&size=0&status=done&width=856">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507548-73f86d12-2de0-4030-b3d0-cc6162e3963c.png#align=left&display=inline&height=460&originHeight=460&originWidth=853&size=0&status=done&width=853">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507059-7fdfc874-8539-4873-b3c9-338e14648d75.png#align=left&display=inline&height=460&originHeight=460&originWidth=851&size=0&status=done&width=851">
+<meta property="og:updated_time" content="2019-07-06T12:03:15.533Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="教你读懂机器学习">
+<meta name="twitter:description" content="前言从AlphaGo战胜李世石开始，AI迎来了新一轮爆发增长，2018年，全球人工智能市场规模达到了73.5亿美元，各个行业和领域几乎都被AI渗透，各国对AI人才的争夺也正愈演愈烈，《中国人工智能发展报告2018》显示，专利上，中国已经成为全球人工智能专利布局最多的国家，数量略微领先于美国和日本；产业上，中国的人工智能企业数量排在全球第二，北京是全球人工智能企业最集中的城市；全球知名创投研究机构">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507025-d1f7ff5b-5fc6-409f-b7c0-947e3f973f6a.png#align=left&display=inline&height=459&originHeight=459&originWidth=682&size=0&status=done&width=682">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Pmlibrary" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Pmlibrary</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            tools
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/undefined/tools/用户体验地图/">用户体验地图</a></li>  <li class="file"><a href="/undefined/tools/UML建模/">UML建模</a></li>  <li class="file"><a href="/undefined/tools/GAP模型/"></a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            产品方法
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/undefined/产品方法/用户体验地图/">用户体验地图</a></li>  <li class="file"><a href="/undefined/产品方法/UML建模/">UML建模</a></li>  <li class="file"><a href="/undefined/产品方法/KANO 模型/">KANO 模型</a></li>  <li class="file"><a href="/undefined/产品方法/产品说明书/">产品说明书</a></li>  <li class="file"><a href="/undefined/产品方法/ORID读书模型/">ORID读书模型</a></li>  <li class="file"><a href="/undefined/产品方法/用户认知地图/">用户认知地图</a></li>  <li class="file"><a href="/undefined/产品方法/怎样才算写了一份好的产品说明书？/">怎样才算写了一份好的产品说明书？</a></li>  <li class="file"><a href="/undefined/产品方法/实例解析：怎么撰写一份产品数据报告/">实例解析：怎么撰写一份产品数据报告</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理常用工具清单/">产品经理常用工具清单</a></li>  <li class="file"><a href="/undefined/产品方法/移情图/">移情图</a></li>  <li class="file"><a href="/undefined/产品方法/卡牌模板及示例/">卡牌模板及示例</a></li>  <li class="file"><a href="/undefined/产品方法/如何撰写一份接地气的PRD文档/">如何撰写一份接地气的PRD文档</a></li>  <li class="file"><a href="/undefined/产品方法/GAP模型/">GAP模型</a></li>  <li class="file"><a href="/undefined/产品方法/如何准备pecha kucha/">如何准备pecha kucha</a></li>  <li class="file"><a href="/undefined/产品方法/产品分析方法论/">产品分析方法论</a></li>  <li class="file"><a href="/undefined/产品方法/软硬产品如何设计/">软硬产品如何设计</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理三大报告/">产品经理三大报告</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理三大文档/">产品经理三大文档</a></li>  <li class="file"><a href="/undefined/产品方法/半路子出家的产品经理，如何做项目管理/">半路子出家的产品经理，如何做项目管理</a></li>  <li class="file"><a href="/undefined/产品方法/产品经理养成计划/">产品经理养成计划</a></li>  <li class="file active"><a href="/undefined/产品方法/教你读懂机器学习/">教你读懂机器学习</a></li>  <li class="file"><a href="/undefined/产品方法/如何分析职场环境并破局——具体案例分析/">如何分析职场环境并破局——具体案例分析</a></li>  <li class="file"><a href="/undefined/产品方法/黑天鹅/">黑天鹅</a></li>  <li class="file"><a href="/undefined/产品方法/从点子到产品/">从点子到产品</a></li>  <li class="file"><a href="/undefined/产品方法/结网/">结网</a></li>  <li class="file"><a href="/undefined/产品方法/引导工具箱/">引导工具箱</a></li>  <li class="file"><a href="/undefined/产品方法/从”在看个人主页“来看社交推荐的发展/">从”在看个人主页“来看社交推荐的发展</a></li>  <li class="file"><a href="/undefined/产品方法/设计搜索界面，你需要考虑这20个细节/">设计搜索界面，你需要考虑这20个细节</a></li>  <li class="file"><a href="/undefined/产品方法/WEB表单设计-结构篇/">WEB表单设计-结构篇</a></li>  <li class="file"><a href="/undefined/产品方法/关于详情页对齐方式分析/">关于详情页对齐方式分析</a></li>  <li class="file"><a href="/undefined/产品方法/PMP考试专区/">PMP考试专区</a></li>  <li class="file"><a href="/undefined/产品方法/NPDP考证专区/">NPDP考证专区</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-产品方法/教你读懂机器学习" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/产品方法/">产品方法</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/undefined/产品方法/教你读懂机器学习/">
+            <time datetime="2019-07-06T10:38:00.000Z" itemprop="datePublished">2019-07-06</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/raw/writing/source/_posts/产品方法/教你读懂机器学习.md"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/edit/writing/source/_posts/产品方法/教你读懂机器学习.md"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/pmlibrary/pmlibrary/commits/writing/source/_posts/产品方法/教你读懂机器学习.md"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            教你读懂机器学习
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p><a name="JGivQ"></a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>从AlphaGo战胜李世石开始，AI迎来了新一轮爆发增长，2018年，全球人工智能市场规模达到了73.5亿美元，各个行业和领域几乎都被AI渗透，各国对AI人才的争夺也正愈演愈烈，《中国人工智能发展报告2018》显示，专利上，中国已经成为全球人工智能专利布局最多的国家，数量略微领先于美国和日本；产业上，中国的人工智能企业数量排在全球第二，北京是全球人工智能企业最集中的城市；全球知名创投研究机构CB Insights评选出了100家最有前途的AI公司，国内的商汤科技，旷视科技，第四范式等6家公司杀入到榜单中，同时各大互联网公司都在构建自己的AI实验室，一方面通过AI技术挖掘用户数据，通过+AI，优化现有业务，另一方面探索AI应用新场景，研发新产品，完成AI+，为企业寻找全新的增长引擎。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507025-d1f7ff5b-5fc6-409f-b7c0-947e3f973f6a.png#align=left&amp;display=inline&amp;height=459&amp;originHeight=459&amp;originWidth=682&amp;size=0&amp;status=done&amp;width=682" alt><br>      <br>笔者有幸参与了一个机器学习建模实验室项目，项目的本质是抽象机器学习建模流程，将机器学习建模过程组件化，通过在画布上对组件（算子）灵活连接，让非专家用户（不会写代码，不熟悉算法模型和调参的产品经理，市场运营，行政财务等职场人）可以快速搭建机器学习模型，实现业务预测，极大降低机器学习应用门槛。<br>通过近十个月的学习和实践，笔者对机器学习有了初步理解，本文将通过大量案例和通俗易懂的“人话”，讲述机器学习建模逻辑和使用场景，让非数据科学专业的职场人都可以快速了解机器学习是什么，能做什么，如何用！<br>如果感觉文章对您有所帮助记得点赞哦~</p>
+<blockquote>
+<p>本文共分为四个部分<br>第一部分、介绍关于AI的常见误区，回答机器学习是什么，可以用来做什么，怎么用；<br>第二分部、介绍机器学习为业务赋能的6个步骤，及非专家用户的应用难点和解决方案；<br>第三部分、通过案例介绍二分类，聚类和回归模型如何应用；<br>第四部分、介绍机器学习模型的主要应用场景和立项模板。</p>
+</blockquote>
+<p><a name="deLSO"></a></p>
+<h1 id="一、关于AI的几个误区"><a href="#一、关于AI的几个误区" class="headerlink" title="一、关于AI的几个误区"></a>一、关于AI的几个误区</h1><p><a name="1BT1x"></a></p>
+<h3 id="1、只有那些科技公司才能应用AI技术？"><a href="#1、只有那些科技公司才能应用AI技术？" class="headerlink" title="1、只有那些科技公司才能应用AI技术？"></a>1、只有那些科技公司才能应用AI技术？</h3><p>这一轮AI的火爆始于AlphaGo战胜李世石，随后，智慧城市，智慧生活，智慧办公和智慧医疗等概念可谓是铺天盖地，在各种媒体上能看到各种AI的高大上应用场景，如阿里的鹿班系统双十一时每秒设计8000张海报，无人驾驶汽车在部分城市指定路段上路测试，机器人索菲亚获得了沙特“公民”身份，滴滴利用AI模型预测城市不同位置用车需求，AI读片进入各大医院辅助医生判断癌症，各种报道 让一些非AI相关领域从业者感觉其过于高大上，似乎离自己很远。但笔者认为AI的价值不仅于此，各行各业其实都可以利用AI技术优化现有服务流程，提升效率。<br>笔者结合自身理解，举一些机器学习在非互联网公司中的常见应用场景。<br>会员智能化应用。基于历史数据对会员精准营销，挖掘用户潜在消费需求，个性化优惠券下发，流失预警，新会员转化路径个性化配置等<br>商品智能化应用。预测未来X时间内销售量，库存量，订单量，关联销售，优化供应链，预测市场容量，新品定价，设定折扣策略和作弊检测。<br>异常分析。订单异常分析，用户异常分析，机械故障预测，羊毛党分析，动态预警分析等。<br>除了上述场景外，只要业务需求可以抽象成分类预测问题，数值预测问题，都可以考虑利用机器学习辅助决策。<br><a name="gLXeq"></a></p>
+<h3 id="2、使用AI技术必须掌握数学和python？"><a href="#2、使用AI技术必须掌握数学和python？" class="headerlink" title="2、使用AI技术必须掌握数学和python？"></a>2、使用AI技术必须掌握数学和python？</h3><p>DT(Data technology)时代到来，企业在互联网+的过程中积累了大量的数据，而AI技术就是帮助企业将这些数据有效利用起来的重要工具，《中国ICT人才生态白皮书》显示，到2018年底，我国人工智能人才缺口将突破100万，到2020年，这个数字将攀升到226万， 笔者认为，这个数字描述的是AI应用型人才，也就是知道如何利用AI技术优化现有业务的职场人，非人工智能从业者都会对其产生恐惧，当我提到AI一般人闹钟都会出现两幅画面，如下所示：<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507236-7612774e-053a-4146-9e7f-64f280672482.png#align=left&amp;display=inline&amp;height=292&amp;originHeight=292&amp;originWidth=942&amp;size=0&amp;status=done&amp;width=942" alt><br>      <br>写代码和复杂的数学公式领AI看起来门槛高不可攀，但是为了降低建模门槛，国内外大量公司都推出了自己的组件建模平台，可以通过简单拖拽无需编写代码，而负责的数学公式被封装成算子组件，国外的亚马逊AWS，微软的AZURE，R2.ai，国内的阿里PI，第四范式的先知平台都是类似产品，现在深度学习建模过程也被封装成了组件化建模，国外的deepcognition，国内即将上线的阿里PI新版本也将支持深度学习组件化建模，联想的AI平台可以支持简单的图像分类识别。如果你感觉组件化还是麻烦，那么笔者要告诉你，现在自动化建模也是一大趋势，国外的datarobot就是其中的典型产品，只需要上传一份打好标签的csv数据，选择标签，点击开始，系统自动从数千开源模型中选择100个模型进行自动化调参训练，选出最优模型，并提易懂专业的数据和模型分析报告，指导非专家用户使用。所以不要因为惧怕写代码和数学而惧怕AI,其实他们没有必然联系，下文会介绍一些AI-机器学习的常用概念，进一步揭开AI的面纱。<br><a name="wpY4j"></a></p>
+<h3 id="3、AI相关的抽象概念太多，让人不明觉厉"><a href="#3、AI相关的抽象概念太多，让人不明觉厉" class="headerlink" title="3、AI相关的抽象概念太多，让人不明觉厉"></a>3、AI相关的抽象概念太多，让人不明觉厉</h3><p>2018年罗胖的跨年演讲中提到了人类的一项重要能力：抽象能力，世界太复杂，为了便于理解和沟通协作，我们会将很多事物进行抽象，但是，当我们不具备对抽象概念的还原能力时，我们常会产生恐惧，敬畏或排斥的情绪，对我们这些非数据科学专业的人来说，初遇AI时就是如此，AI的底层是数学，而数学是对现实世界的高度抽象，当我们听到算法，模型，过拟合，召回率，auc，随机森林，朴素贝叶斯等高度抽象的词汇时，当我们看到几十行数学公式推导时，我们会本能的不明觉厉。举个例子，我这样介绍我的项目：“我们利用无监督学习Kmeans模型完成用户标签聚类，使用XGBOOST模型，SVM模型预测用户购买期望，进而实现精准推荐”，听完这句介绍你是什么感觉，如果一个完全没接触过机器学习的小白可能瞬间就懵逼了，原因很简单，简单一句话中包含了大量你无法理解的抽象概念，而事实可能并非如此，同样的介绍我换一种说法，“我们通过一些规则给用户打上标签，使用一套计算规则预测用户希望购买哪些商品，然后给他们做相应推荐”，是不是瞬间感觉没那么高大上了。下文尝试用简单类比对这些抽象概念进行说明，但前提是读者需要先摒弃掉那种对抽象概念的恐惧，我相信，看完本文后，当你听到这些抽象概念时可以淡然一笑，既不恐惧也不敬畏，并且理解其本质。<br>网上有一张图，很有意思，生动的表明了不同的人对机器学习的理解：<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507010-57b50325-56f0-4685-bfc4-db90cb17e194.png#align=left&amp;display=inline&amp;height=606&amp;originHeight=606&amp;originWidth=720&amp;size=0&amp;status=done&amp;width=720" alt><br>      <br>别人眼中的机器学习<br>先来看一些基础概念，这些概念会在后面的数据预处理，特征工程，模型调参和评估中用到，现在这里做简要类比和举例说明。<br><a name="Kq3DR"></a></p>
+<h3 id="4、机器学习常用抽象概念梳理"><a href="#4、机器学习常用抽象概念梳理" class="headerlink" title="4、机器学习常用抽象概念梳理"></a>4、机器学习常用抽象概念梳理</h3><p>ai，机器学习和深度学习。这三个概念是包含关系，ai&gt;机器学习&gt;深度学习。我们耳熟能详的深度学习实际上是机器学习大家族中的一个分支，如下图所示，本文主要讨论传统机器学习（浅层学习）部分内容，深度学习还在学习当中，也在抽象其建模过程，感兴趣的朋友可以加好友共同学习。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507260-84705412-ce73-441f-8c93-4ca2406da65c.png#align=left&amp;display=inline&amp;height=296&amp;originHeight=296&amp;originWidth=564&amp;size=0&amp;status=done&amp;width=564" alt><br>      <br>监督学习和无监督学习。监督学习就是模型学习的数据需要有标签，非监督学习就是模型学习的数据无需有标签，那么什么是标签呢？举个例子，下图是心脏数据，其中ihealth特征含有两个值，1代表患有心脏病，0代表没有心脏病，当我们需要预测用户是否患有心脏病时，因为有两个结果，那就是一个二分类问题，ihealth就这个数据集的标签特征。每一列代表一个特征，每一行数据代表一个样本，进入模型的数据需要保证主键唯一，主键通常是用户的身份证号码，编号或者手机号等唯一标识。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409506989-aa84891a-ad2c-4c9d-98e0-177ce8fb9592.png#align=left&amp;display=inline&amp;height=127&amp;originHeight=127&amp;originWidth=605&amp;size=0&amp;status=done&amp;width=605" alt><br>      <br>训练集，验证集和预测集。通常情况下，会将完成特征工程和标签工程的数据拆成三份，一份训练数据，一份验证数据，一份预测数据，其比例大概可以设为数据集的60%，20%和20%。训练集用于训练模型，验证集用于验证训练集训练模型效果，通过调参逐步提高验证集上模型的预测效果，预测集用于判断模型对于新数据是否有效，是否存在过拟合。大概流程如下图所示：<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507015-5aad482e-0328-442a-b34f-9efefc8b5559.png#align=left&amp;display=inline&amp;height=581&amp;originHeight=581&amp;originWidth=599&amp;size=0&amp;status=done&amp;width=599" alt><br>      <br>欠拟合和过拟合。欠拟合是在验证集上预测的效果不好，也就是没有将我们希望分类的两组数据分开。过拟合就是在验证集上效果很好，但是预测真实数据时效果很不好，如下图所示。左一图属于欠拟合，因为并没有将目标数据按照结果标签很好的完成分类，彼此掺杂在一起；右一就是过拟合，为了把所有数据都分开，出现了一份非常复杂的曲线，因为太复杂，应用于新的数据时往往预测效果不好，当数据量很小时容易出现过拟合。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507031-2112faf7-f979-4a02-8a03-9417a24ca4a4.png#align=left&amp;display=inline&amp;height=174&amp;originHeight=174&amp;originWidth=613&amp;size=0&amp;status=done&amp;width=613" alt><br>      <br>算法模型的本质。算法的本质是一个函数，我们可以将模型想象成一个盒子，这个盒子有输入和输出，还有一些可以设置数值的面板，我们把数据扔入其中，通过不断调整数值（模型参数），提升这个盒子预测结果的准确性，入下图所示：<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409506962-9f4d0d25-189a-4844-ba24-ee4751961b49.png#align=left&amp;display=inline&amp;height=146&amp;originHeight=146&amp;originWidth=629&amp;size=0&amp;status=done&amp;width=629" alt><br>      <br>树模型和线性模型。线性模型是为所有进入模型的特征赋予权重，并相加出来一个新的值，树模型是一个一个特征进行处理，常用的线性模型有逻辑回归，SVM，常用的树模型有XGBOOST，LIGHTGBM，随机森林和GBDT。线性模型相对来说具有更好的解释性，而且处理小数据量时效果较好，树模型做大数据量训练速度快，模型预测效果较好，可解释性不如线性模型，需要通过可视化的数据分树来对模型解释。以逻辑回归为例来简单说明线性模型，其将所有特征赋予权重后加和变换为概率，这个这个概率通常称为阈值，比如模型预测得到阈值是0.6，通过数据分布我们设定阈值大于0.5为1，小于等于0.5为0，因为数值为0.6，顾我们判定预测结果为1；以决策树为例来说明树模型，决策时类似于流程图的树形结构，树内的每个节点代表对一个特征的分类预测，树的每一叶子节点代表一个类别，为了训练决策树，我们需要使用训练数据集并找出那个属性对目标最有用。<br>模型结果评估方法。因为二分类在应用中比较常见，我们以二分类为例来说明二分类的常用评估指标。评估二分类模型的最重要指标为auc，auc值越接近1模型的效果越好,auc为ROC曲线下的区域面积 。 <br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507122-a3738b4f-9293-466f-ba9b-aab28fd84b20.png#align=left&amp;display=inline&amp;height=413&amp;originHeight=413&amp;originWidth=657&amp;size=0&amp;status=done&amp;width=657" alt><br>      <br>精确率（precision）是精确性的度量，表示被分为正例的示例中实际为正例的比例，precision=TP/（TP+FP）<br>召回率（recall）是覆盖面的度量，度量有多个正例被分为正例，recall=TP/(TP+FN)=TP/P=sensitive，可以看到召回率与灵敏度是一样的。<br>正确率（accuracy）是我们最常见的评价指标，accuracy = （TP+TN）/(P+N)，这个很容易理解，就是被分对的样本数除以所有的样本数，通常来说，正确率越高，分类器越好。<br>f1：是统计学中用来衡量二分类模型精确度的一种指标。它同时兼顾了分类模型的准确率和召回率。f1分数可以看作是模型准确率和召回率的一种加权平均，它的最大值是1，最小值是0。f1=2<em>precision</em>recall/（precision+recall）<br>根据模型效果可以将模型分成二分类模型，多分类模型，回归模型，时间序列模型，聚类模型，推荐模型，笔者尝试通过案例一句话介绍常用模型应用场景，并附上通俗易懂的拓展阅读材料，帮助大家更深刻的理解这些模型可以如何应用。<br>二分类：可以把预测目标抽象成两类，如预测是否患有心脏病，预测用户对某个产品是否感兴趣，可以将预测结果抽象成0和1。阿里PI平台提供了心脏病预测案例<a href="https://help.aliyun.com/knowledge_detail/34929.html" target="_blank" rel="noopener">https://help.aliyun.com/knowledge_detail/34929.html</a><br>多分类：可以把预测目标抽象成多个类别，如预测用户年龄段等，一般情况会将多分类问题转化成二分类处理。<br>回归：预测某个时间点数值的模型，如预测房价，预测产品价格等。典型案例是预测波士顿房价。<a href="https://blog.csdn.net/Teresa_Xin/article/details/79204769" target="_blank" rel="noopener">https://blog.csdn.net/Teresa_Xin/article/details/79204769</a><br>时间序列：预测某一段时间多个数值的模型，如预测未来一周每天股票价格，预测未来一段时间最高气温。<br>聚类：无监督学习，数据无需标签，根据设定分组数自动进行分组，通过观察分组数据特征给用户分群打标，常用于用户分群。案例青少年市场细分。<a href="http://cookdata.cn/note/view_static_note/201ad8d4a6c12768f7f79754a45e1b77/" target="_blank" rel="noopener">http://cookdata.cn/note/view_static_note/201ad8d4a6c12768f7f79754a45e1b77/</a><br>推荐模型：经典推荐模型是协同过滤，协同过滤分为两类，基于产品的协同过滤和基于用户的协同过滤。基于产品的协同过滤是用户A喜欢苹果，然后通过算法计算出其他水果与苹果的相似度，然后进行推荐给A；基于用户的协同过滤是用户A喜欢苹果，将同样喜欢苹果的用户B喜欢的额其他产品推荐给A。推荐阅读文章<a href="https://www.jianshu.com/p/e56665c54df8" target="_blank" rel="noopener">https://www.jianshu.com/p/e56665c54df8</a><br>不同类模型的常用算法如下图所示，希望读者们再看到这些抽象模型名字后莫慌，可以思考他们处理哪类，一步步思考如何应用。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507042-eab73ba6-e190-4c38-86b0-ecaeb7c0301e.png#align=left&amp;display=inline&amp;height=350&amp;originHeight=350&amp;originWidth=554&amp;size=0&amp;status=done&amp;width=554" alt></p>
+<p><a name="KAXsK"></a></p>
+<h1 id="二、机器学习项目流程"><a href="#二、机器学习项目流程" class="headerlink" title="二、机器学习项目流程"></a>二、机器学习项目流程</h1><p>本章节分为两部分，第一部分介绍机器学习为业务赋能类项目的常规流程，第二部分介绍常规的建模流程。<br><a name="YfkJY"></a></p>
+<h3 id="1、机器学习为业务赋能流程"><a href="#1、机器学习为业务赋能流程" class="headerlink" title="1、机器学习为业务赋能流程"></a>1、机器学习为业务赋能流程</h3><p>1.1、商业理解<br>明确商业问题和数据挖掘目标，需要通过与一线业务和运营人员沟通，深入理解商业问题的背景，同时对项目所需资源进行评估，这个阶段就需要明确项目商业目标和成功的评估标准。实施要点，充分沟通调研，设定适合的机器学习应用场景。常见的场景有提升用户复购，优化用户推荐，预测用户流失实施召回。本质来说商业的核心问题就是增加收入、减少流失和人员提效。<br>注：机器学习类项目一定要与业务方或运营方深度合作，彼此参与，共同推进项目，因为业务的优化常常伴随着KPI提高，人效提高常伴随着裁员等业务担心问题，可能面对很大阻碍。<br>1.2、数据理解<br>根据商业痛点和目标，梳理企业内部外数据，探索建模索要的目标变量，确定建模需要的数据，确定取数口径，明确数据业务指标业务含义和指标使用规则，这个过程中算法同学需要深入介入业务中，理解各项业务指标含义，并根据业务的理解完成后续数据预处理和特征工程等操作。<br>注：必备的内外部数据获取，需要保证许菊的一致性，完整性和准确性，数据理解阶段触目确定目标因子。<br>1.3、数据准备<br>将数据集合成大宽表或创建数据集市，对数据进行清洗，转换，校验数据质量，对数据进行标准化操作，需要使用科学的编码规范指导编码。该阶段需要对数据缺失值，异常值进行处理。同时需要完成特征工程，特征工程是耗费时间最多的过程，一般情况，建模中花费特征工程耗费整个项目近80%的时间。<br>1.4、数据建模<br>选择合适的模型算法技术，实现数据挖掘目标，通过样本选取，确定训练集，验证集和预测集数据，该阶段需要完成特征筛选，模型训练和调参，模型预测评估，是否满足目标。<br>注：特征数据决定了模型的上限效果，模型调参只是让模型的效果趋向这个上限。二分类模型评估指标auc可以调优范围很小，优化0.01都非常困难，在一些建模比赛中可能auc差异可能只有0.0001<br>1.5、模型评估<br>全面应用模型进行预测，判断是否实现商业目标，通过科学的A/B测试，对目标场景进行模型应用，收集反馈效果，对预测效果进行评估分析，确定其统计有效性和真实有效性，判断是否满足商业目标。<br>1.6、模型部署<br>将验证有效的模型应用于商业环境，并监控与维护模型，实时跟踪模型效果，验证商业目标达成情况，总结报告，积累经验。<br><a name="1YyVX"></a></p>
+<h3 id="2、常规建模流程"><a href="#2、常规建模流程" class="headerlink" title="2、常规建模流程"></a>2、常规建模流程</h3><p>从业务系统或日志系统进行数据提取，数据预处理，特征工程，模型训练和调优，预测和评估，如下图所示。我们还是以心脏病的数据为例，我们从系统中导出历史数据作为训练数据，因为医疗数据很多都已经有标签的，无需再次打标，后面会讲解数据没有标签如何处理。<br>拿到数据后，第一步，进行预处理。处理缺失值和异常值问题，缺失值很容易理解，就是给那些没数据特征填一个数值，简单方法可以填充固定值（如-999），平均值，众数或中位数等，复杂的方法可以利用XXX，填充相似数据特征的缺失值。异常值是指将一些不靠谱的值提出，比如年龄数据，理论上是0-120，当年龄字段出现309时我们就需要将其调整到正常范围，简单的方法可以将其调整到上限，众数或中位数等。<br>第二步，进行特征工程，因为算法模型本质就是数学，所以要把类别特征转换成数值，比如原始数据中性别那一列中是男，女，那么我们就需要将其变成数值0,1，其中0代表男，1代表女。one-hot特征编码也是一种常见的处理特征的方法，如一个特征包含0,1,2三个数值，那么可以一特征拆成三个，分别用0,0,1代表0，用0,1,0代表1，用户1,0,0代表2，也就是把不同的类别特征都用0和1去表示，还有很多其他方式，如结合业务规则构建特征，特征多项式交叉相乘，PCA降维等。特征工程可以说是建模过程中最耗时的部分，算法工程师实际建模工作中将会有80-90%的时间花在特征工程阶段。<br>第三步，模型训练和调参。也就是将完成预处理和特征工程的数据接入模型，找到相对最优的模型参数，并基于训练数据训练处最优模型。<br>第四步，模型预测和评估。使用训练好的模型跑验证数据，查看预测效果，并根据模型效果继续调参，经过更多轮循环找到最有模型参数。<br>第五步，模型应用和效果评估。使用历史数据完成模型训练和调优后我们需要应用到真实业务中，通过A/B测试查看模型的真实效果。<br>第六步，模型优化，随着业务拓展和环境变化，可能产生新的特征，所以模型要进行持续调优。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507279-f8fb5504-e430-4cad-ab02-882a4aa34de7.png#align=left&amp;display=inline&amp;height=194&amp;originHeight=194&amp;originWidth=554&amp;size=0&amp;status=done&amp;width=554" alt><br>      <br>注：应用不同类模型特征工程方法不同，如使用线性模型需要对数据做标准化或归一化，统一不同特征量纲，而树模型则无需进行这类操作。<br><a name="B8I1B"></a></p>
+<h1 id="三、模型应用实例概述"><a href="#三、模型应用实例概述" class="headerlink" title="三、模型应用实例概述"></a>三、模型应用实例概述</h1><p>本章节通过三个典型案例介绍三类常用模型，同时介绍非专家用户应用机器学习建模的难点，同时尝试提供解决方案。现在很多同类文章都包含了大量python实现代码和数学模型分析，对于非专家用户不太友好，笔者尝试用流程介绍告知模型是如何应用，其中提到了如何进行简单的特征工程操作。<br><a name="sp543"></a></p>
+<h3 id="1、模型应用实例"><a href="#1、模型应用实例" class="headerlink" title="1、模型应用实例"></a>1、模型应用实例</h3><p>1.1、二分类模型（逻辑回归-泰坦尼克号预测生还概率）<br>泰坦尼克号生还实验可谓是一个经典二分类预测，在kaggle平台上一直开放，截止到2019年5月2日，共有11374个队伍参加预测学习，训练数据和预测数据为泰坦尼克号上的所有乘客基础数据，训练集包含819条数据，11个特征和1个标签列，标签列告知用户是否生还，生还为1，去世了为0，预测数据包含了418条数据，11个特征，需要预测这418个人是否生还。<br>笔者尝试使用组件化建模工具开始建模，过程如下，首先进行训练数据全表分析，查看缺失值情况，各特征的统计信息，其中cabin缺失率近80%删除该特征，年龄特征也包含一定缺失值我们选择填充年龄中位数。对数值型特征进行异常特征平滑和归一化，异常特征平滑就是将异常值填充固定值，所谓归一化就是将数值型数据归一到[0,1]中间，转换函数为:x = (x-min)/(max-min)  。对类别特征进行类别特征编码，对客舱等级，船票等级等类别特征进行onehot操作，并将处理完成后的数据分成训练集，验证集和预测集，使用逻辑回归模型，进行自动调参运算，选择最优参数后保存模型，将官方提供预测数据经过上述特征工程后接入最优模型，预测用户是否生还，得到的结果是一个概率，也称为阈值，当阈值大于0.5的则判定为1（生还），小于0.5判定为0（遇难），预测结果准确率为0.7799，结果如下图所示，结果表示再给我一条新的样本，有78%概率可以准确预测用户是生还还是遇难。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507076-210616ae-443e-46f2-981a-433f37ba94e1.png#align=left&amp;display=inline&amp;height=587&amp;originHeight=587&amp;originWidth=971&amp;size=0&amp;status=done&amp;width=971" alt><br>      <br>1.2、回归模型（XGBOOST-预测波士顿房价）<br>前文中提到预测具体数值的模型可以称为回归预测，本案例也是经典回归预测案例，数据集大家可以到<a href="https://archive.ics.uci.edu/ml/datasets.html" target="_blank" rel="noopener">UCI机器学习知识库</a>下载，波士顿房屋这些数据于1978年开始统计，共506个数据点，涵盖了麻省波士顿不同郊区房屋14种特征的信息。包含城市人均犯罪率，住在用地所占比例，城镇中非商业用地所占比例，CHAS查尔斯河虚拟变量，环保指数，没懂住在的房间数等特征，标签特征为自住房屋价格的中位数。数据预处理和特征工程与二分类相似，回归模型评估模型效果的指标有几个，SSE,MSE,RMSE,R-square，这个案例中我们通过运算决定系数R-square来量化模型的表现，决定系数是回归分析中十分常用的统计信息，经常被当作衡量模型预测能力好坏的标准。R-square数值范围从0至1，表示目标变量的预测值和实际值之间的相关程度平方的百分比。一个模型的R-square 值为0还不如直接用平均值来预测效果好；而一个R-square 值为1的模型则可以对目标变量进行完美的预测。从0至1之间的数值，则表示该模型中目标变量中有百分之多少能够用特征来解释。<br>1.3、聚类模型（Kmeans-聚类高中生分群）<br>聚类模型是无监督模型，我们以前文中提到青少年市场细分为例，通过对30000个美国高中生社交网络信息数据集聚类，实现用户分群聚类，按照前文中所使用的异常特征平滑，归一化，类别特征编码，onehot等步骤，完成数据预处理和特征工程，模型我们选用常用聚类模型K-means，我们选择将数据聚成5类，从结果来看我们将数据聚成了5组，如下图所示，<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507091-55064f24-5559-4ae4-b1fc-cb3b603375ae.png#align=left&amp;display=inline&amp;height=98&amp;originHeight=98&amp;originWidth=112&amp;size=0&amp;status=done&amp;width=112" alt><br>      <br>因为没有标签，我们需要查看每一个聚类中心的变量取值从大到小进行排序。 通过观察每个聚类前10个变量来分析聚类所代表的群体，所以我们需要通过分析聚类结果来确定分群用户有哪些类似爱好和特点。通常情况下用户分群可以基于规则认为设定，而聚类模型的聚类特征可以作为分类模型和回归模型的特征接入模型。举例来说，当我们要基于用户活跃度指标进行用户分群时，我们可以考虑将所有跟活跃相关的特征作为训练特征，然后设定分群数，通过聚类模型完成分群后分析分群数据特征，进而实现用户打标。<br><a name="IOg0q"></a></p>
+<h3 id="2、非专家用户的门槛在哪里"><a href="#2、非专家用户的门槛在哪里" class="headerlink" title="2、非专家用户的门槛在哪里"></a>2、非专家用户的门槛在哪里</h3><p>2.1、不会写代码。写代码可以说是很多非程序员眼中巨大的门槛，其实python相比于大学时普遍学习的C或java简单很多，大量的服务和实现已经封装成包，通过import引用即可应用，现在很多小学都开始普及编程，很多少儿编程辅导机构可以让孩子快速使用python完成深度学习，甚至实现玩具汽车的无人驾驶。而且前文中提到，大量的可视化建模工具和自动化建模工具出现，这将极大降低AI技术应用的门槛，其实从前文中的建模流程不难看出，算法工程师也需要先熟悉业务才能开始建模，这部分来看，如果有工具可以解决建模过程那么业务人员对业务的理解将更加深刻。所以还是建议对这方面感兴趣的同学可以打破心理枷锁，咬牙学一下python，前10个小时可能很痛苦，但是掌握了后续就非常简单了。<br>注：并不是算法同学不重要，真正高级的建模一定是结合业务理解和统计学知识的特征构建，而不是简单聚合和转换，组件化和自动学习可以让企业快速应用模型，实现一定程度的提升，但是进一步的模型优化一定需要专业经验的算法同学介入。<br>2.2、不会调参。模型有很多参数，如树模型的树的棵树，树的最大深度，学习率，随机种子等，非数据学相关专业的同学看到可能直接懵逼，但是现在主流的建模平台都提供了自动调参功能，自动学习工具甚至提供了根据上游数据结构进行自动调参，所以这部分不用恐惧，跟着样例做几次就知道了。<br>2.3、不会做特征工程。所谓特征工程是将特征日志或多系统数据“拍平”成模型可用的特征，并对特征进行各种变化拓展，通常算法工程师会将几个业务特征拓展成几百个特征，下面笔者简单介绍一下特征如何“拍平”和拓展。日志数据和业务数据通常是根据时间维度，多个主键列表，如电商订单数据，用户A可能有几十条购买订单记录，建模的预测是对单个主键进行预测，所以需要将多条订单“拍平”，也就是用户A的手机号或者系统ID合成一条记录，那么多条记录如何合并呢？这就是设计到特征拓展，比如可以设定一个时间段内用户A的订单数，购买总金额，购买A产品的数量，购买B产品的数量，单笔订单最大支付金额，单笔订单最小支付金额，订单平均间隔，订单最大间隔等，将单挑记录通过最小，最大，平均等维度拍平后，需要对类别特征变换，常用的特征工程方法有类别特征编码，onehot，离散化等操作。类别特征编码是指将业务类别特征变成数值，如使用优惠券满减，直降和未使用可以标记为0,1,2；onehot编码是将类别特征变成使用0和1表示的特征，如将上述优惠券一个特征变成了0，0，1和0,1,0，和1,0,0三个特征；离散化是指将连续的特征变成类别特征，如对年龄分段，0-10岁定为0,11-20定为1，以此类推，就可以对年龄特征变成一个类别特征，然后再做onebot。<br>注：数据拍平对于非专家用户很难处理，但是我参与的项目已经找到了解决方案，可以将多张表根据关联关系和数据类型自动化拍平成为模型可用特征，相信其他平台也会提供这项服务，笔者认为，这是制约非专家用户应用机器学习模型的一大门槛，和下文中提到的标签工程类似。<br>2.4、不会做标签工程。前文中提到的心脏病预测，泰坦尼克号生还预测，房价预测都是自带标签，但很多时候，数据中没有办法直接拥有这种分类或者数值属性的标签，通常使用滑窗法制作标签，如下图所示，我们要预测7月份用户是否有购买商品A的欲望，我们可以使用2,3,4月三个月的数据作为训练数据，5月的数据作为标签数据制作训练集，因为5月份我们知道用户是否购买了A产品，然后再用3,4,5三个月的数据作为训练数据，通过6月份用户是否购买A产品作为标签，这样我们可以用历史数据完成模型训练，然后应用于对用户7月份是否购买某商品的预测。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507088-38d76067-5a75-4cd2-925e-659389d94e04.png#align=left&amp;display=inline&amp;height=283&amp;originHeight=283&amp;originWidth=763&amp;size=0&amp;status=done&amp;width=763" alt></p>
+<p><a name="VNpw9"></a></p>
+<h1 id="四、AI项目立项模板"><a href="#四、AI项目立项模板" class="headerlink" title="四、AI项目立项模板"></a>四、AI项目立项模板</h1><p>1、商业痛点分析及目标分解<br>如前文所述，在启动AI项目之前，要梳理商业逻辑，分析现有的痛点，将痛点拆解为目标，模型围绕目标去构建。常见的目标有提升营销效率，实现精准化营销，减少用户干扰，减少用户流失，提升转化率，提升ROI等。笔者发现所有的AI项目都会涉及到用户或客户画像，因为构建模型的特征一版包含三部分，一部分是用户的静态信息，一部分是用户的行为和交易信息，一部分是用户应用的场景信息，而用户的景泰信息和一些行为信息都可以抽象为用户画像，所以很多AI项目的目标还包括为用户或客户构建画像，便于产品和运营方更加理解自己的服务对象。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507029-18fdbba7-316e-4744-9de3-3b167bcafb0e.png#align=left&amp;display=inline&amp;height=461&amp;originHeight=461&amp;originWidth=853&amp;size=0&amp;status=done&amp;width=853" alt><br>      <br>2、项目架构<br>利用机器学习的项目架构类似，大家可以参考CDP系统项架构来完成项目的整体架构设计，笔者简单结合自己的理解简单搭建一个项目架构作为参考。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507052-07776299-4157-4a15-a9ae-ea0b6fac083e.png#align=left&amp;display=inline&amp;height=460&amp;originHeight=460&amp;originWidth=852&amp;size=0&amp;status=done&amp;width=852" alt><br>      <br>3、技术架构<br>笔者与工程同学和算法同学沟通，了解到一些建模平台的底层技术，构架如下图所示，图中，<br>Hadoop实现了一个分布式文件系统（Hadoop Distributed File System），简称HDFS。Hadoop实质上更多是一个分布式数据基础设施: 它将巨大的数据集分派到一个由普通计算机组成的集群中的多个节点进行存储，意味着您不需要购买和维护昂贵的服务器硬件。<br>Apache Hadoop YARN （Yet Another Resource Negotiator，另一种资源协调者）是一种新的 Hadoop 资源管理器，它是一个通用资源管理系统，可为上层应用提供统一的资源管理和调度，<br>Spark，是一个专门用来对分布式存储的大数据进行处理的工具，它并不会进行分布式数据的存储。<br>Hbase是Hadoop database，即Hadoop数据库。它是一个适合于非结构化数据存储的数据库，HBase基于列的而不是基于行的模式。<br>Hive基于数据仓库，提供静态数据的动态查询。其使用类SQL语言，底层经过编译转为MapReduce程序，在Hadoop上运行，数据存储在HDFS上。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507551-d6ebb16d-ef3d-4c34-a141-f4cadf21aee7.png#align=left&amp;display=inline&amp;height=463&amp;originHeight=463&amp;originWidth=857&amp;size=0&amp;status=done&amp;width=857" alt><br>      <br>4、项目规划<br>通常来说机器学习类项目一期多为构建用户画像，二期结合画像和用户标签体系构建模型，设计试运行策略，根据实际效果对模型进行调优。可以根据不同的业务痛点构建多个模型，逐步构建起一整套模型体系，辅助决策。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507185-949149bf-1056-4efe-8e5d-8f8a37d89850.png#align=left&amp;display=inline&amp;height=464&amp;originHeight=464&amp;originWidth=856&amp;size=0&amp;status=done&amp;width=856" alt><br>      <br>5、应用场景<br>结合具体应用场景，描述如何将模型嵌入到现有业务流程当中。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507548-73f86d12-2de0-4030-b3d0-cc6162e3963c.png#align=left&amp;display=inline&amp;height=460&amp;originHeight=460&amp;originWidth=853&amp;size=0&amp;status=done&amp;width=853" alt><br>      <br>6、模型效果评估方法<br>模型的实际效果可以通过A/B测试进行验证，选择两组用户，一组保持原有运营或产品策略，一组使用机器学习模型推荐策略，通过一个业务周期的观察，对比两组用户的效果评估指标变化。<br><br>        <img src="https://cdn.nlark.com/yuque/0/2019/png/350999/1562409507059-7fdfc874-8539-4873-b3c9-338e14648d75.png#align=left&amp;display=inline&amp;height=460&amp;originHeight=460&amp;originWidth=851&amp;size=0&amp;status=done&amp;width=851" alt><br>      <br>因为部分内容涉及公司业务，不便于举例说明，文中多数案例均为初学者常见案例，大家可以搜索到相关内容，本文仅将笔者近一年的收获和思考进行梳理总结，希望对各位读者有所帮助。笔者还在学习深度学习，NLP，推荐系统等相关AI知识，AI产品经理当下来看属于产品经理全新的一个细分门类，希望可以与同行们多多交流学习~<br>文章转载自<a href="https://www.pmcaff.com/user/profile/4AQgR66eL2" target="_blank" rel="noopener">田宇洲</a>文章链接为<a href="https://coffee.pmcaff.com/article/Zdkj7NNMLV" target="_blank" rel="noopener">https://coffee.pmcaff.com/articl</a></p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/undefined/产品方法/如何分析职场环境并破局——具体案例分析/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    如何分析职场环境并破局——具体案例分析
+                
+            </div>
+        </a>
+    
+    
+        <a href="/undefined/产品方法/产品经理养成计划/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">产品经理养成计划</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            John Doe &copy; 2019 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
